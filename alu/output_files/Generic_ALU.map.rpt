@@ -1,0 +1,1050 @@
+Analysis & Synthesis report for Generic_ALU
+Thu Sep 15 14:06:28 2016
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Partition Status Summary
+  7. Dependent File Changes for Partition Top
+  8. Partition for Top-Level Resource Utilization by Entity
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: alu:test_alu
+ 11. Parameter Settings for User Entity Instance: alu:test_alu|carry_select_adder:csa
+ 12. Parameter Settings for User Entity Instance: alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0
+ 13. Parameter Settings for User Entity Instance: alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra
+ 14. Parameter Settings for User Entity Instance: alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra
+ 15. Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul
+ 16. Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0
+ 17. Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i
+ 18. Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i
+ 19. Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s
+ 20. Parameter Settings for User Entity Instance: alu:test_alu|divider:div
+ 21. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|absolute:abs_dividend
+ 22. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|absolute:abs_dividend|tc_converter:tcc
+ 23. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|absolute:abs_divisor
+ 24. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|absolute:abs_divisor|tc_converter:tcc
+ 25. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div
+ 26. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0
+ 27. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra
+ 28. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i
+ 29. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra
+ 30. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i
+ 31. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra
+ 32. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i
+ 33. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra
+ 34. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i
+ 35. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra
+ 36. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|tc_converter:conv_res
+ 37. Parameter Settings for User Entity Instance: alu:test_alu|divider:div|tc_converter:conv_rem
+ 38. Parameter Settings for User Entity Instance: alu:test_alu|barrel_shifter:sft
+ 39. Parameter Settings for User Entity Instance: alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:0:lsb:ss_0
+ 40. Parameter Settings for User Entity Instance: alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:1:msb:ss_s
+ 41. Parameter Settings for User Entity Instance: alu:test_alu|word_comparator:cmp
+ 42. Parameter Settings for User Entity Instance: alu:test_alu|word_comparator:cmp|tree_comparator:tc
+ 43. Parameter Settings for User Entity Instance: alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:0:first_stage:cs_0
+ 44. Parameter Settings for User Entity Instance: alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:1:last_stage:cs_s
+ 45. Parameter Settings for User Entity Instance: alu:test_alu|bit_manipulator:bop
+ 46. Partition Dependent Files
+ 47. Port Connectivity Checks: "alu:test_alu|divider:div|tc_converter:conv_rem"
+ 48. Port Connectivity Checks: "alu:test_alu|divider:div|tc_converter:conv_res"
+ 49. Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i"
+ 50. Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i"
+ 51. Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i"
+ 52. Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra"
+ 53. Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0"
+ 54. Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i"
+ 55. Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i"
+ 56. Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:4:msb:mbcs"
+ 57. Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0"
+ 58. Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul"
+ 59. Port Connectivity Checks: "alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra"
+ 60. Port Connectivity Checks: "alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra"
+ 61. Elapsed Time Per Partition
+ 62. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Sep 15 14:06:28 2016          ;
+; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; Generic_ALU                                    ;
+; Top-level Entity Name              ; demo                                           ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
++------------------------------------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                   ;
++----------------------------------------------------------------------------+---------------+--------------------+
+; Option                                                                     ; Setting       ; Default Value      ;
++----------------------------------------------------------------------------+---------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7 ;                    ;
+; Top-level entity name                                                      ; demo          ; Generic_ALU        ;
+; Family name                                                                ; Cyclone IV E  ; Cyclone IV GX      ;
+; VHDL Show LMF Mapping Messages                                             ; Off           ;                    ;
+; VHDL Version                                                               ; VHDL_2008     ; VHDL_1993          ;
+; PowerPlay Power Optimization                                               ; Off           ; Normal compilation ;
+; Use smart compilation                                                      ; Off           ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On            ; On                 ;
+; Enable compact report table                                                ; Off           ; Off                ;
+; Restructure Multiplexers                                                   ; Auto          ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off           ; Off                ;
+; Preserve fewer node names                                                  ; On            ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off           ; Off                ;
+; Verilog Version                                                            ; Verilog_2001  ; Verilog_2001       ;
+; State Machine Processing                                                   ; Auto          ; Auto               ;
+; Safe State Machine                                                         ; Off           ; Off                ;
+; Extract Verilog State Machines                                             ; On            ; On                 ;
+; Extract VHDL State Machines                                                ; On            ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off           ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000          ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250           ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On            ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On            ; On                 ;
+; Parallel Synthesis                                                         ; On            ; On                 ;
+; DSP Block Balancing                                                        ; Auto          ; Auto               ;
+; NOT Gate Push-Back                                                         ; On            ; On                 ;
+; Power-Up Don't Care                                                        ; On            ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off           ; Off                ;
+; Remove Duplicate Registers                                                 ; On            ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off           ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off           ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off           ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off           ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off           ; Off                ;
+; Ignore SOFT Buffers                                                        ; On            ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off           ; Off                ;
+; Optimization Technique                                                     ; Balanced      ; Balanced           ;
+; Carry Chain Length                                                         ; 70            ; 70                 ;
+; Auto Carry Chains                                                          ; On            ; On                 ;
+; Auto Open-Drain Pins                                                       ; On            ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off           ; Off                ;
+; Auto ROM Replacement                                                       ; On            ; On                 ;
+; Auto RAM Replacement                                                       ; On            ; On                 ;
+; Auto DSP Block Replacement                                                 ; On            ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto          ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto          ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On            ; On                 ;
+; Strict RAM Replacement                                                     ; Off           ; Off                ;
+; Allow Synchronous Control Signals                                          ; On            ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off           ; Off                ;
+; Auto RAM Block Balancing                                                   ; On            ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off           ; Off                ;
+; Auto Resource Sharing                                                      ; Off           ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off           ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off           ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off           ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On            ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off           ; Off                ;
+; Timing-Driven Synthesis                                                    ; On            ; On                 ;
+; Report Parameter Settings                                                  ; On            ; On                 ;
+; Report Source Assignments                                                  ; On            ; On                 ;
+; Report Connectivity Checks                                                 ; On            ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off           ; Off                ;
+; Synchronization Register Chain Length                                      ; 2             ; 2                  ;
+; HDL message level                                                          ; Level2        ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off           ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000          ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000          ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100           ; 100                ;
+; Clock MUX Protection                                                       ; On            ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off           ; Off                ;
+; Block Design Naming                                                        ; Auto          ; Auto               ;
+; SDC constraint protection                                                  ; Off           ; Off                ;
+; Synthesis Effort                                                           ; Auto          ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On            ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off           ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium        ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto          ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On            ; On                 ;
+; Synthesis Seed                                                             ; 1             ; 1                  ;
++----------------------------------------------------------------------------+---------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-8 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++-----------------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path        ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
++-----------------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; demo.vhd                                ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/demo.vhd                                ;         ;
+; alu.vhd                                 ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/alu.vhd                                 ;         ;
+; adder/half_adder.vhd                    ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/adder/half_adder.vhd                    ;         ;
+; adder/full_adder.vhd                    ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/adder/full_adder.vhd                    ;         ;
+; adder/carry_ripple_adder.vhd            ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/adder/carry_ripple_adder.vhd            ;         ;
+; adder/carry_select_block.vhd            ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/adder/carry_select_block.vhd            ;         ;
+; adder/carry_select_adder.vhd            ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/adder/carry_select_adder.vhd            ;         ;
+; multiplier/multiplier_base_cell.vhd     ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/multiplier/multiplier_base_cell.vhd     ;         ;
+; multiplier/multiplier_slice.vhd         ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/multiplier/multiplier_slice.vhd         ;         ;
+; multiplier/four_quadrant_multiplier.vhd ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/multiplier/four_quadrant_multiplier.vhd ;         ;
+; divider/tc_converter.vhd                ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/divider/tc_converter.vhd                ;         ;
+; divider/absolute.vhd                    ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/divider/absolute.vhd                    ;         ;
+; divider/divider_slice.vhd               ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/divider/divider_slice.vhd               ;         ;
+; divider/restoring_divider.vhd           ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/divider/restoring_divider.vhd           ;         ;
+; divider/divider.vhd                     ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/divider/divider.vhd                     ;         ;
+; shifter/shifting_slice.vhd              ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/shifter/shifting_slice.vhd              ;         ;
+; shifter/barrel_shifter.vhd              ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/shifter/barrel_shifter.vhd              ;         ;
+; comparator/comparator.vhd               ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/comparator/comparator.vhd               ;         ;
+; comparator/comparing_slice.vhd          ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/comparator/comparing_slice.vhd          ;         ;
+; comparator/tree_comparator.vhd          ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/comparator/tree_comparator.vhd          ;         ;
+; comparator/word_comparator.vhd          ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/comparator/word_comparator.vhd          ;         ;
+; bitwise_logic/bit_manipulator.vhd       ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/bitwise_logic/bit_manipulator.vhd       ;         ;
+; seven_segment_decoder.vhd               ; yes             ; User VHDL File  ; H:/Master Projekt/ALU/seven_segment_decoder.vhd               ;         ;
++-----------------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Partition Status Summary                               ;
++----------------+-------------+-------------------------+
+; Partition Name ; Synthesized ; Reason                  ;
++----------------+-------------+-------------------------+
+; Top            ; yes         ; Dependent files changed ;
++----------------+-------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Dependent File Changes for Partition Top                                                                                   ;
++-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
+; Hierarchy ; File Name ; Relative Location ; Change   ; Old                              ; New                              ;
++-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
+; |         ; demo.vhd  ; Project Directory ; Checksum ; ac223fcaa7ebacc94b2c628bb6c9bcb5 ; a9fe9126a3c1da118c4420c05f4fbcf7 ;
++-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                                                                                                                                           ;
++----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                        ; Library Name ;
++----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |demo                                                    ; 269 (61)          ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo                                                                                                                                                      ; work         ;
+;    |alu:test_alu|                                        ; 175 (62)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu                                                                                                                                         ; work         ;
+;       |barrel_shifter:sft|                               ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|barrel_shifter:sft                                                                                                                      ; work         ;
+;          |shifting_slice:\gen_bs:0:lsb:ss_0|             ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:0:lsb:ss_0                                                                                    ; work         ;
+;          |shifting_slice:\gen_bs:1:msb:ss_s|             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:1:msb:ss_s                                                                                    ; work         ;
+;       |bit_manipulator:bop|                              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|bit_manipulator:bop                                                                                                                     ; work         ;
+;       |carry_select_adder:csa|                           ; 13 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa                                                                                                                  ; work         ;
+;          |carry_select_block:\gen_csa:0:lsb:csb0|        ; 11 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0                                                                           ; work         ;
+;             |carry_ripple_adder:c_0_cra|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra                                                ; work         ;
+;                |full_adder:\cra:1:msbs:fa_i|             ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:1:msbs:fa_i                    ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha2     ; work         ;
+;                |full_adder:\cra:2:msbs:fa_i|             ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:2:msbs:fa_i                    ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha2     ; work         ;
+;                |full_adder:\cra:3:msbs:fa_i|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:3:msbs:fa_i                    ; work         ;
+;             |carry_ripple_adder:c_1_cra|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra                                                ; work         ;
+;                |full_adder:\cra:1:msbs:fa_i|             ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:1:msbs:fa_i                    ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha2     ; work         ;
+;                |full_adder:\cra:2:msbs:fa_i|             ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:2:msbs:fa_i                    ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha2     ; work         ;
+;                |full_adder:\cra:3:msbs:fa_i|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:3:msbs:fa_i                    ; work         ;
+;       |divider:div|                                      ; 36 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div                                                                                                                             ; work         ;
+;          |absolute:abs_dividend|                         ; 5 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|absolute:abs_dividend                                                                                                       ; work         ;
+;             |tc_converter:tcc|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|absolute:abs_dividend|tc_converter:tcc                                                                                      ; work         ;
+;          |absolute:abs_divisor|                          ; 4 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|absolute:abs_divisor                                                                                                        ; work         ;
+;             |tc_converter:tcc|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|absolute:abs_divisor|tc_converter:tcc                                                                                       ; work         ;
+;          |restoring_divider:div|                         ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div                                                                                                       ; work         ;
+;             |divider_slice:\gen_d:1:msbs:ds_i|           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i                                                                      ; work         ;
+;                |carry_ripple_adder:cra|                  ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra                                               ; work         ;
+;                   |full_adder:\cra:3:msbs:fa_i|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i                   ; work         ;
+;                      |half_adder:ha2|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2    ; work         ;
+;             |divider_slice:\gen_d:2:msbs:ds_i|           ; 7 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i                                                                      ; work         ;
+;                |carry_ripple_adder:cra|                  ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra                                               ; work         ;
+;                   |full_adder:\cra:0:lsb:fa_0|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0                    ; work         ;
+;                   |full_adder:\cra:3:msbs:fa_i|          ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i                   ; work         ;
+;                      |half_adder:ha2|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2    ; work         ;
+;             |divider_slice:\gen_d:3:msbs:ds_i|           ; 6 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i                                                                      ; work         ;
+;                |carry_ripple_adder:cra|                  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra                                               ; work         ;
+;                   |full_adder:\cra:0:lsb:fa_0|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0                    ; work         ;
+;                   |full_adder:\cra:1:msbs:fa_i|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i                   ; work         ;
+;                   |full_adder:\cra:3:msbs:fa_i|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i                   ; work         ;
+;                      |half_adder:ha2|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2    ; work         ;
+;             |divider_slice:\gen_d:4:msbs:ds_i|           ; 7 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i                                                                      ; work         ;
+;                |carry_ripple_adder:cra|                  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra                                               ; work         ;
+;                   |full_adder:\cra:1:msbs:fa_i|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i                   ; work         ;
+;                   |full_adder:\cra:2:msbs:fa_i|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i                   ; work         ;
+;                   |full_adder:\cra:4:msbs:fa_i|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i                   ; work         ;
+;          |tc_converter:conv_rem|                         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|tc_converter:conv_rem                                                                                                       ; work         ;
+;          |tc_converter:conv_res|                         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|divider:div|tc_converter:conv_res                                                                                                       ; work         ;
+;       |four_quadrant_multiplier:mul|                     ; 34 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul                                                                                                            ; work         ;
+;          |multiplier_slice:\gen_cra:0:lsb:ms_0|          ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0                                                                       ; work         ;
+;             |multiplier_base_cell:\gen_cra:4:msb:mbcs|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:4:msb:mbcs                              ; work         ;
+;          |multiplier_slice:\gen_cra:1:bet:ms_i|          ; 10 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i                                                                       ; work         ;
+;             |multiplier_base_cell:\gen_cra:0:lsb:mbc0|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0                              ; work         ;
+;                |full_adder:fa|                           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa                ; work         ;
+;                   |half_adder:ha1|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha1 ; work         ;
+;             |multiplier_base_cell:\gen_cra:1:bet:mbci|   ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci                              ; work         ;
+;                |full_adder:fa|                           ; 4 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha2 ; work         ;
+;             |multiplier_base_cell:\gen_cra:2:bet:mbci|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci                              ; work         ;
+;                |full_adder:fa|                           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha2 ; work         ;
+;             |multiplier_base_cell:\gen_cra:3:bet:mbci|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci                              ; work         ;
+;                |full_adder:fa|                           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha2 ; work         ;
+;          |multiplier_slice:\gen_cra:2:bet:ms_i|          ; 10 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i                                                                       ; work         ;
+;             |multiplier_base_cell:\gen_cra:0:lsb:mbc0|   ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0                              ; work         ;
+;                |full_adder:fa|                           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa                ; work         ;
+;                   |half_adder:ha1|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha1 ; work         ;
+;             |multiplier_base_cell:\gen_cra:1:bet:mbci|   ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci                              ; work         ;
+;                |full_adder:fa|                           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha2 ; work         ;
+;             |multiplier_base_cell:\gen_cra:2:bet:mbci|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci                              ; work         ;
+;                |full_adder:fa|                           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha2 ; work         ;
+;             |multiplier_base_cell:\gen_cra:3:bet:mbci|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci                              ; work         ;
+;                |full_adder:fa|                           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha2 ; work         ;
+;          |multiplier_slice:\gen_cra:3:msb:ms_s|          ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s                                                                       ; work         ;
+;             |multiplier_base_cell:\gen_cra:0:lsb:mbc0|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:0:lsb:mbc0                              ; work         ;
+;                |full_adder:fa|                           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha2 ; work         ;
+;             |multiplier_base_cell:\gen_cra:1:bet:mbci|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:1:bet:mbci                              ; work         ;
+;                |full_adder:fa|                           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha2 ; work         ;
+;             |multiplier_base_cell:\gen_cra:2:bet:mbci|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:2:bet:mbci                              ; work         ;
+;                |full_adder:fa|                           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha2 ; work         ;
+;             |multiplier_base_cell:\gen_cra:3:bet:mbci|   ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:3:bet:mbci                              ; work         ;
+;                |full_adder:fa|                           ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa                ; work         ;
+;                   |half_adder:ha2|                       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha2 ; work         ;
+;       |word_comparator:cmp|                              ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|word_comparator:cmp                                                                                                                     ; work         ;
+;          |tree_comparator:tc|                            ; 9 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|word_comparator:cmp|tree_comparator:tc                                                                                                  ; work         ;
+;             |comparing_slice:\gen_tc:0:first_stage:cs_0| ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:0:first_stage:cs_0                                                       ; work         ;
+;                |comparator:\gen_cs:0:comp_i|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:0:first_stage:cs_0|comparator:\gen_cs:0:comp_i                           ; work         ;
+;    |seven_segment_decoder:hex_2|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|seven_segment_decoder:hex_2                                                                                                                          ; work         ;
+;    |seven_segment_decoder:hex_3|                         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|seven_segment_decoder:hex_3                                                                                                                          ; work         ;
+;    |seven_segment_decoder:hex_4|                         ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|seven_segment_decoder:hex_4                                                                                                                          ; work         ;
+;    |seven_segment_decoder:hex_6|                         ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |demo|seven_segment_decoder:hex_6                                                                                                                          ; work         ;
++----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |demo|alu:test_alu|p_result_hi[2]                                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |demo|alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:0:lsb:ss_0|p_result[1] ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |demo|alu:test_alu|p_result_lo[2]                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; g_size         ; 3     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|carry_select_adder:csa ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; g_block_size   ; 3     ; Signed Integer                                          ;
+; g_blocks       ; 0     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0 ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; g_size         ; 3     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|absolute:abs_dividend ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|absolute:abs_dividend|tc_converter:tcc ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|absolute:abs_divisor ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|absolute:abs_divisor|tc_converter:tcc ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0 ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                       ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                       ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                       ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                       ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|tc_converter:conv_res ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|divider:div|tc_converter:conv_rem ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; g_size         ; 4     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|barrel_shifter:sft ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:0:lsb:ss_0 ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                        ;
+; g_step         ; 1     ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:1:msb:ss_s ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                        ;
+; g_step         ; 2     ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|word_comparator:cmp ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|word_comparator:cmp|tree_comparator:tc ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:0:first_stage:cs_0 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:1:last_stage:cs_s ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+; g_size         ; 1     ; Signed Integer                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:test_alu|bit_manipulator:bop ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; g_size         ; 3     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Partition Dependent Files                                                                                ;
++-----------------------------------------+-------------------+---------+----------------------------------+
+; File                                    ; Location          ; Library ; Checksum                         ;
++-----------------------------------------+-------------------+---------+----------------------------------+
+; adder/carry_ripple_adder.vhd            ; Project Directory ; work    ; 6ae7525974d802fe37a0711d004c5d43 ;
+; adder/carry_select_adder.vhd            ; Project Directory ; work    ; 6886246a709f1ff663d7e3fc44d7edf2 ;
+; adder/carry_select_block.vhd            ; Project Directory ; work    ; 36367b49e8ca1174d85a544cf58b9281 ;
+; adder/full_adder.vhd                    ; Project Directory ; work    ; b589dc6604f2c53d9395b6caa9fa3f75 ;
+; adder/half_adder.vhd                    ; Project Directory ; work    ; 72ee0de9f829c14c7c4b488442a251c1 ;
+; alu.vhd                                 ; Project Directory ; work    ; d9a613b171d7616055ee85c45fc26a05 ;
+; bitwise_logic/bit_manipulator.vhd       ; Project Directory ; work    ; de5d02991e0874406d3a39d84906275f ;
+; comparator/comparator.vhd               ; Project Directory ; work    ; e1add49c15b22e91f81b118128b96abb ;
+; comparator/comparing_slice.vhd          ; Project Directory ; work    ; 4cc35f9fe848a8696dde661deaeca386 ;
+; comparator/tree_comparator.vhd          ; Project Directory ; work    ; 41c378cd318616d38cb208ccee7bffaf ;
+; comparator/word_comparator.vhd          ; Project Directory ; work    ; 2c272329d7bd9b170a0d686991e86bac ;
+; demo.vhd                                ; Project Directory ; work    ; a9fe9126a3c1da118c4420c05f4fbcf7 ;
+; divider/absolute.vhd                    ; Project Directory ; work    ; 256741208618b6a028560398c561720b ;
+; divider/divider.vhd                     ; Project Directory ; work    ; a09b178526737a501e9ffafc3301b9fa ;
+; divider/divider_slice.vhd               ; Project Directory ; work    ; afb107aa7047e08751db98e0ab902560 ;
+; divider/restoring_divider.vhd           ; Project Directory ; work    ; 2daab0b0bfb04aeb2e40395298d179c7 ;
+; divider/tc_converter.vhd                ; Project Directory ; work    ; 38ec530bcae2e9b8f42040ebcc115542 ;
+; multiplier/four_quadrant_multiplier.vhd ; Project Directory ; work    ; 5197e259a3effa1d7ce20b497473d3c5 ;
+; multiplier/multiplier_base_cell.vhd     ; Project Directory ; work    ; 570e408bf409fc0f13e97766ec31623c ;
+; multiplier/multiplier_slice.vhd         ; Project Directory ; work    ; 85f2633fdafcef835c4ce6585d9e06ca ;
+; seven_segment_decoder.vhd               ; Project Directory ; work    ; af46f22f6a290064c2d80b64350897ae ;
+; shifter/barrel_shifter.vhd              ; Project Directory ; work    ; 2d40f4397deebe972d7a7f7d3b5e1215 ;
+; shifter/shifting_slice.vhd              ; Project Directory ; work    ; 93fdafcafdf402dfe8ded96564a9b70b ;
++-----------------------------------------+-------------------+---------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|divider:div|tc_converter:conv_rem"                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; p_out[4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|divider:div|tc_converter:conv_res"                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; p_out[4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i"           ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; p_remain[4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i"           ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; p_remain[4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i"           ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; p_remain[4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra" ;
++--------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                               ;
++--------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; p_c_in ; Input ; Info     ; Stuck at VCC                                                                                          ;
++--------+-------+----------+-------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0"                 ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; p_dividend[4..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; p_remain[4]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i" ;
++--------+-------+----------+--------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                        ;
++--------+-------+----------+--------------------------------------------------------------------------------+
+; p_c_in ; Input ; Info     ; Stuck at GND                                                                   ;
++--------+-------+----------+--------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i" ;
++--------+-------+----------+--------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                        ;
++--------+-------+----------+--------------------------------------------------------------------------------+
+; p_c_in ; Input ; Info     ; Stuck at GND                                                                   ;
++--------+-------+----------+--------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:4:msb:mbcs" ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                               ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; p_c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                   ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0" ;
++--------+-------+----------+--------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                        ;
++--------+-------+----------+--------------------------------------------------------------------------------+
+; p_c_in ; Input ; Info     ; Stuck at GND                                                                   ;
++--------+-------+----------+--------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|four_quadrant_multiplier:mul" ;
++-------+-------+----------+--------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                    ;
++-------+-------+----------+--------------------------------------------+
+; p_add ; Input ; Info     ; Stuck at GND                               ;
++-------+-------+----------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra" ;
++--------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                               ;
++--------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; p_c_in ; Input ; Info     ; Stuck at VCC                                                                                          ;
++--------+-------+----------+-------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra" ;
++--------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                               ;
++--------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; p_c_in ; Input ; Info     ; Stuck at GND                                                                                          ;
++--------+-------+----------+-------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Sep 15 14:06:03 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Generic_ALU -c Generic_ALU
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file demo.vhd
+    Info (12022): Found design unit 1: demo-arch
+    Info (12023): Found entity 1: demo
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-arch
+    Info (12023): Found entity 1: alu
+Info (12021): Found 2 design units, including 1 entities, in source file adder/half_adder.vhd
+    Info (12022): Found design unit 1: half_adder-arch
+    Info (12023): Found entity 1: half_adder
+Info (12021): Found 2 design units, including 1 entities, in source file adder/full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-arch
+    Info (12023): Found entity 1: full_adder
+Info (12021): Found 2 design units, including 1 entities, in source file adder/carry_ripple_adder.vhd
+    Info (12022): Found design unit 1: carry_ripple_adder-arch
+    Info (12023): Found entity 1: carry_ripple_adder
+Info (12021): Found 2 design units, including 1 entities, in source file adder/carry_select_block.vhd
+    Info (12022): Found design unit 1: carry_select_block-arch
+    Info (12023): Found entity 1: carry_select_block
+Info (12021): Found 2 design units, including 1 entities, in source file adder/carry_select_adder.vhd
+    Info (12022): Found design unit 1: carry_select_adder-arch
+    Info (12023): Found entity 1: carry_select_adder
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier/multiplier_base_cell.vhd
+    Info (12022): Found design unit 1: multiplier_base_cell-arch
+    Info (12023): Found entity 1: multiplier_base_cell
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier/multiplier_slice.vhd
+    Info (12022): Found design unit 1: multiplier_slice-arch
+    Info (12023): Found entity 1: multiplier_slice
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier/four_quadrant_multiplier.vhd
+    Info (12022): Found design unit 1: four_quadrant_multiplier-arch
+    Info (12023): Found entity 1: four_quadrant_multiplier
+Info (12021): Found 2 design units, including 1 entities, in source file divider/tc_converter.vhd
+    Info (12022): Found design unit 1: tc_converter-arch
+    Info (12023): Found entity 1: tc_converter
+Info (12021): Found 2 design units, including 1 entities, in source file divider/absolute.vhd
+    Info (12022): Found design unit 1: absolute-arch
+    Info (12023): Found entity 1: absolute
+Info (12021): Found 2 design units, including 1 entities, in source file divider/divider_slice.vhd
+    Info (12022): Found design unit 1: divider_slice-arch
+    Info (12023): Found entity 1: divider_slice
+Info (12021): Found 2 design units, including 1 entities, in source file divider/restoring_divider.vhd
+    Info (12022): Found design unit 1: restoring_divider-arch
+    Info (12023): Found entity 1: restoring_divider
+Info (12021): Found 2 design units, including 1 entities, in source file divider/divider.vhd
+    Info (12022): Found design unit 1: divider-arch
+    Info (12023): Found entity 1: divider
+Info (12021): Found 2 design units, including 1 entities, in source file shifter/shifting_slice.vhd
+    Info (12022): Found design unit 1: shifting_slice-arch
+    Info (12023): Found entity 1: shifting_slice
+Info (12021): Found 2 design units, including 1 entities, in source file shifter/barrel_shifter.vhd
+    Info (12022): Found design unit 1: barrel_shifter-arch
+    Info (12023): Found entity 1: barrel_shifter
+Info (12021): Found 2 design units, including 1 entities, in source file comparator/comparator.vhd
+    Info (12022): Found design unit 1: comparator-arch
+    Info (12023): Found entity 1: comparator
+Info (12021): Found 2 design units, including 1 entities, in source file comparator/comparing_slice.vhd
+    Info (12022): Found design unit 1: comparing_slice-arch
+    Info (12023): Found entity 1: comparing_slice
+Info (12021): Found 2 design units, including 1 entities, in source file comparator/tree_comparator.vhd
+    Info (12022): Found design unit 1: tree_comparator-arch
+    Info (12023): Found entity 1: tree_comparator
+Info (12021): Found 2 design units, including 1 entities, in source file comparator/word_comparator.vhd
+    Info (12022): Found design unit 1: word_comparator-arch
+    Info (12023): Found entity 1: word_comparator
+Info (12021): Found 2 design units, including 1 entities, in source file bitwise_logic/bit_manipulator.vhd
+    Info (12022): Found design unit 1: bit_manipulator-arch
+    Info (12023): Found entity 1: bit_manipulator
+Info (12021): Found 2 design units, including 1 entities, in source file seven_segment_decoder.vhd
+    Info (12022): Found design unit 1: seven_segment_decoder-Behavior
+    Info (12023): Found entity 1: seven_segment_decoder
+Info (12127): Elaborating entity "demo" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at demo.vhd(68): signal "s_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at demo.vhd(70): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at demo.vhd(70): signal "KEY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at demo.vhd(77): signal "s_operand_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at demo.vhd(79): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at demo.vhd(79): signal "KEY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at demo.vhd(86): signal "s_operand_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "alu" for hierarchy "alu:test_alu"
+Info (12128): Elaborating entity "carry_select_adder" for hierarchy "alu:test_alu|carry_select_adder:csa"
+Info (12128): Elaborating entity "carry_select_block" for hierarchy "alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0"
+Info (12128): Elaborating entity "carry_ripple_adder" for hierarchy "alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra"
+Info (12128): Elaborating entity "full_adder" for hierarchy "alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:0:lsb:fa_0"
+Info (12128): Elaborating entity "half_adder" for hierarchy "alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha1"
+Info (12128): Elaborating entity "four_quadrant_multiplier" for hierarchy "alu:test_alu|four_quadrant_multiplier:mul"
+Info (12128): Elaborating entity "multiplier_slice" for hierarchy "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0"
+Info (12128): Elaborating entity "multiplier_base_cell" for hierarchy "alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:0:lsb:mbc0"
+Info (12128): Elaborating entity "divider" for hierarchy "alu:test_alu|divider:div"
+Info (12128): Elaborating entity "absolute" for hierarchy "alu:test_alu|divider:div|absolute:abs_dividend"
+Info (12128): Elaborating entity "tc_converter" for hierarchy "alu:test_alu|divider:div|absolute:abs_dividend|tc_converter:tcc"
+Info (12128): Elaborating entity "restoring_divider" for hierarchy "alu:test_alu|divider:div|restoring_divider:div"
+Warning (10540): VHDL Signal Declaration warning at restoring_divider.vhd(41): used explicit default value for signal "s_zero_vector" because signal was never assigned a value
+Info (12128): Elaborating entity "divider_slice" for hierarchy "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0"
+Info (12128): Elaborating entity "carry_ripple_adder" for hierarchy "alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra"
+Info (12128): Elaborating entity "barrel_shifter" for hierarchy "alu:test_alu|barrel_shifter:sft"
+Info (12128): Elaborating entity "shifting_slice" for hierarchy "alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:0:lsb:ss_0"
+Info (12128): Elaborating entity "shifting_slice" for hierarchy "alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:1:msb:ss_s"
+Info (12128): Elaborating entity "word_comparator" for hierarchy "alu:test_alu|word_comparator:cmp"
+Info (12128): Elaborating entity "tree_comparator" for hierarchy "alu:test_alu|word_comparator:cmp|tree_comparator:tc"
+Info (12128): Elaborating entity "comparing_slice" for hierarchy "alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:0:first_stage:cs_0"
+Info (12128): Elaborating entity "comparator" for hierarchy "alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:0:first_stage:cs_0|comparator:\gen_cs:0:comp_i"
+Info (12128): Elaborating entity "comparing_slice" for hierarchy "alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:1:last_stage:cs_s"
+Info (12128): Elaborating entity "bit_manipulator" for hierarchy "alu:test_alu|bit_manipulator:bop"
+Info (12128): Elaborating entity "seven_segment_decoder" for hierarchy "seven_segment_decoder:hex_2"
+Warning (10631): VHDL Process Statement warning at seven_segment_decoder.vhd(13): inferring latch(es) for signal or variable "segbits", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "segbits[0]" at seven_segment_decoder.vhd(13)
+Info (10041): Inferred latch for "segbits[1]" at seven_segment_decoder.vhd(13)
+Info (10041): Inferred latch for "segbits[2]" at seven_segment_decoder.vhd(13)
+Info (10041): Inferred latch for "segbits[3]" at seven_segment_decoder.vhd(13)
+Info (10041): Inferred latch for "segbits[4]" at seven_segment_decoder.vhd(13)
+Info (10041): Inferred latch for "segbits[5]" at seven_segment_decoder.vhd(13)
+Info (10041): Inferred latch for "segbits[6]" at seven_segment_decoder.vhd(13)
+Info (12205): 1 design partition requires Analysis and Synthesis
+    Info (12211): Partition "Top" requires synthesis because there were changes to its dependent source files
+Info (12209): No design partitions will skip synthesis in the current incremental compilation
+Info (281020): Starting Logic Optimization and Technology Mapping for Top Partition
+Info (286030): Timing-Driven Synthesis is running
+Info (21057): Implemented 339 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 46 output pins
+    Info (21061): Implemented 270 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 387 megabytes
+    Info: Processing ended: Thu Sep 15 14:06:28 2016
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:09
+
+

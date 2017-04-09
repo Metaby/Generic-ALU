@@ -1,0 +1,190 @@
+m255
+K3
+13
+cModel Technology
+dH:\Master Projekt\ModelSim\Unsigned Adder Validierung
+Ecomparator
+Z0 w1469713082
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dH:\Master Projekt\ModelSim\Comparator Validierung
+Z4 8H:/Master Projekt/ModelSim/Comparator Validierung/comparator.vhd
+Z5 FH:/Master Projekt/ModelSim/Comparator Validierung/comparator.vhd
+l0
+L17
+V:S4d1k1P_P[@74b?l^<Kb3
+Z6 OV;C;10.1b;51
+32
+Z7 !s108 1469714313.380000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|H:/Master Projekt/ModelSim/Comparator Validierung/comparator.vhd|
+Z9 !s107 H:/Master Projekt/ModelSim/Comparator Validierung/comparator.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 2EczX@n^ak:f=Yc[RmobU2
+!i10b 1
+Aarch
+R1
+R2
+DEx4 work 10 comparator 0 22 :S4d1k1P_P[@74b?l^<Kb3
+l31
+L29
+VgLIFaR^KND<bAUHWQ5Pz:0
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 d>zC^?4PI`D6B6<4U[?;f3
+!i10b 1
+Ecomparing_slice
+Z12 w1469713083
+R1
+R2
+R3
+Z13 8H:/Master Projekt/ModelSim/Comparator Validierung/comparing_slice.vhd
+Z14 FH:/Master Projekt/ModelSim/Comparator Validierung/comparing_slice.vhd
+l0
+L17
+VeBIkcB?A6CnN2iKbZeXX30
+R6
+32
+Z15 !s108 1469714314.025000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|H:/Master Projekt/ModelSim/Comparator Validierung/comparing_slice.vhd|
+Z17 !s107 H:/Master Projekt/ModelSim/Comparator Validierung/comparing_slice.vhd|
+R10
+R11
+!s100 S[eINhVJYbF[4e9[m?8mb2
+!i10b 1
+Aarch
+R1
+R2
+DEx4 work 15 comparing_slice 0 22 eBIkcB?A6CnN2iKbZeXX30
+l42
+L30
+V^E=`QFMPHL[0CF4<Kn7i;0
+R6
+32
+R15
+R16
+R17
+R10
+R11
+!s100 QU:iS=Fl@4[_mbYe3VnAI3
+!i10b 1
+Etb
+Z18 w1469009889
+Z19 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+Z20 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R1
+R2
+R3
+Z21 8H:/Master Projekt/ModelSim/Comparator Validierung/testbench.vhd
+Z22 FH:/Master Projekt/ModelSim/Comparator Validierung/testbench.vhd
+l0
+L6
+V3Ze3TB6APL?HW9KQo]Kdj2
+!s100 WiYldaG<Qf@PmM0GCd4lH3
+R6
+32
+!i10b 1
+Z23 !s108 1469714317.224000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|H:/Master Projekt/ModelSim/Comparator Validierung/testbench.vhd|
+Z25 !s107 H:/Master Projekt/ModelSim/Comparator Validierung/testbench.vhd|
+R10
+R11
+Aarch
+Z26 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
+Z27 DEx4 work 15 word_comparator 0 22 05`_<g^TJUKig6kUmIAaR1
+R19
+R20
+R1
+R2
+Z28 DEx4 work 2 tb 0 22 3Ze3TB6APL?HW9KQo]Kdj2
+l20
+L12
+Z29 V]cgVb<z?X47QIQ9YFihHm3
+Z30 !s100 cDAKa_lQS`OB;G=>Z`Whk2
+R6
+32
+!i10b 1
+R23
+R24
+R25
+R10
+R11
+Etree_comparator
+Z31 w1469714316
+R26
+R1
+R2
+R3
+Z32 8H:/Master Projekt/ModelSim/Comparator Validierung/tree_comparator.vhd
+Z33 FH:/Master Projekt/ModelSim/Comparator Validierung/tree_comparator.vhd
+l0
+L18
+V3en8z5KiJ=90LO2mHbch73
+R6
+32
+Z34 !s108 1469714315.879000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|H:/Master Projekt/ModelSim/Comparator Validierung/tree_comparator.vhd|
+Z36 !s107 H:/Master Projekt/ModelSim/Comparator Validierung/tree_comparator.vhd|
+R10
+R11
+!s100 i2PTGe1aTLSeS_oB0TD>=1
+!i10b 1
+Aarch
+R26
+R1
+R2
+DEx4 work 15 tree_comparator 0 22 3en8z5KiJ=90LO2mHbch73
+l55
+L33
+VghM@WF8]OneVUl^:W4HDH2
+R6
+32
+R34
+R35
+R36
+R10
+R11
+!s100 de<X;USajSk<62LY?Hn6P3
+!i10b 1
+Eword_comparator
+Z37 w1469713105
+R26
+R1
+R2
+R3
+Z38 8H:/Master Projekt/ModelSim/Comparator Validierung/word_comparator.vhd
+Z39 FH:/Master Projekt/ModelSim/Comparator Validierung/word_comparator.vhd
+l0
+L18
+V05`_<g^TJUKig6kUmIAaR1
+R6
+32
+Z40 !s108 1469714316.541000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|H:/Master Projekt/ModelSim/Comparator Validierung/word_comparator.vhd|
+Z42 !s107 H:/Master Projekt/ModelSim/Comparator Validierung/word_comparator.vhd|
+R10
+R11
+!s100 JniDXz=2Vk665:^>o=kz@1
+!i10b 1
+Aarch
+R26
+R1
+R2
+R27
+l50
+L32
+VCTza@PnfcJ8d1F=J_5Fm30
+!s100 DP@4mS2NXlBiW_7l1fgbO1
+R6
+32
+R40
+R41
+R42
+R10
+R11
+!i10b 1

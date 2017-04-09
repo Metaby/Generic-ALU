@@ -1,0 +1,3099 @@
+|demo
+LEDR[0] <= alu:test_alu.p_cmp_f
+LEDR[1] <= alu:test_alu.p_ovflw
+LEDR[2] <= alu:test_alu.p_result_lo[0]
+LEDR[3] <= alu:test_alu.p_result_lo[1]
+LEDR[4] <= alu:test_alu.p_result_lo[2]
+LEDR[5] <= alu:test_alu.p_result_lo[3]
+LEDR[6] <= alu:test_alu.p_result_hi[0]
+LEDR[7] <= alu:test_alu.p_result_hi[1]
+LEDR[8] <= alu:test_alu.p_result_hi[2]
+LEDR[9] <= alu:test_alu.p_result_hi[3]
+LEDR[10] <= s_operand_2[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[11] <= s_operand_2[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[12] <= s_operand_2[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[13] <= s_operand_2[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[14] <= s_operand_1[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[15] <= s_operand_1[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[16] <= s_operand_1[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[17] <= s_operand_1[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX2[0] <= seven_segment_decoder:hex_2.segbits[0]
+HEX2[1] <= seven_segment_decoder:hex_2.segbits[1]
+HEX2[2] <= seven_segment_decoder:hex_2.segbits[2]
+HEX2[3] <= seven_segment_decoder:hex_2.segbits[3]
+HEX2[4] <= seven_segment_decoder:hex_2.segbits[4]
+HEX2[5] <= seven_segment_decoder:hex_2.segbits[5]
+HEX2[6] <= seven_segment_decoder:hex_2.segbits[6]
+HEX3[0] <= seven_segment_decoder:hex_3.segbits[0]
+HEX3[1] <= seven_segment_decoder:hex_3.segbits[1]
+HEX3[2] <= seven_segment_decoder:hex_3.segbits[2]
+HEX3[3] <= seven_segment_decoder:hex_3.segbits[3]
+HEX3[4] <= seven_segment_decoder:hex_3.segbits[4]
+HEX3[5] <= seven_segment_decoder:hex_3.segbits[5]
+HEX3[6] <= seven_segment_decoder:hex_3.segbits[6]
+HEX4[0] <= seven_segment_decoder:hex_4.segbits[0]
+HEX4[1] <= seven_segment_decoder:hex_4.segbits[1]
+HEX4[2] <= seven_segment_decoder:hex_4.segbits[2]
+HEX4[3] <= seven_segment_decoder:hex_4.segbits[3]
+HEX4[4] <= seven_segment_decoder:hex_4.segbits[4]
+HEX4[5] <= seven_segment_decoder:hex_4.segbits[5]
+HEX4[6] <= seven_segment_decoder:hex_4.segbits[6]
+HEX6[0] <= seven_segment_decoder:hex_6.segbits[0]
+HEX6[1] <= seven_segment_decoder:hex_6.segbits[1]
+HEX6[2] <= seven_segment_decoder:hex_6.segbits[2]
+HEX6[3] <= seven_segment_decoder:hex_6.segbits[3]
+HEX6[4] <= seven_segment_decoder:hex_6.segbits[4]
+HEX6[5] <= seven_segment_decoder:hex_6.segbits[5]
+HEX6[6] <= seven_segment_decoder:hex_6.segbits[6]
+KEY[0] => s_operand_2.OUTPUTSELECT
+KEY[0] => s_operand_2.OUTPUTSELECT
+KEY[0] => s_operand_2.OUTPUTSELECT
+KEY[0] => s_operand_2.OUTPUTSELECT
+KEY[0] => process_0.IN0
+KEY[1] => process_0.IN1
+KEY[2] => s_operand_1.OUTPUTSELECT
+KEY[2] => s_operand_1.OUTPUTSELECT
+KEY[2] => s_operand_1.OUTPUTSELECT
+KEY[2] => s_operand_1.OUTPUTSELECT
+KEY[2] => process_0.IN0
+KEY[3] => process_0.IN1
+SW[0] => alu:test_alu.p_cmd[0]
+SW[1] => alu:test_alu.p_cmd[1]
+SW[2] => alu:test_alu.p_cmd[2]
+SW[3] => alu:test_alu.p_cmd[3]
+SW[4] => alu:test_alu.p_cmd[4]
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
+CLOCK_50 => clk.CLK
+CLOCK_50 => s_counter[0].CLK
+CLOCK_50 => s_counter[1].CLK
+CLOCK_50 => s_counter[2].CLK
+CLOCK_50 => s_counter[3].CLK
+CLOCK_50 => s_counter[4].CLK
+CLOCK_50 => s_counter[5].CLK
+CLOCK_50 => s_counter[6].CLK
+CLOCK_50 => s_counter[7].CLK
+CLOCK_50 => s_counter[8].CLK
+CLOCK_50 => s_counter[9].CLK
+CLOCK_50 => s_counter[10].CLK
+CLOCK_50 => s_counter[11].CLK
+CLOCK_50 => s_counter[12].CLK
+CLOCK_50 => s_counter[13].CLK
+CLOCK_50 => s_counter[14].CLK
+CLOCK_50 => s_counter[15].CLK
+CLOCK_50 => s_counter[16].CLK
+CLOCK_50 => s_counter[17].CLK
+CLOCK_50 => s_counter[18].CLK
+CLOCK_50 => s_counter[19].CLK
+CLOCK_50 => s_counter[20].CLK
+CLOCK_50 => s_counter[21].CLK
+CLOCK_50 => s_counter[22].CLK
+CLOCK_50 => s_counter[23].CLK
+CLOCK_50 => s_counter[24].CLK
+CLOCK_50 => s_counter[25].CLK
+
+
+|demo|alu:test_alu
+p_op_1[0] => carry_select_adder:csa.p_op_1[0]
+p_op_1[0] => four_quadrant_multiplier:mul.p_op_1[0]
+p_op_1[0] => divider:div.p_dividend[0]
+p_op_1[0] => barrel_shifter:sft.p_op_1[0]
+p_op_1[0] => word_comparator:cmp.p_op_1[0]
+p_op_1[0] => bit_manipulator:bop.p_op_1[0]
+p_op_1[1] => carry_select_adder:csa.p_op_1[1]
+p_op_1[1] => four_quadrant_multiplier:mul.p_op_1[1]
+p_op_1[1] => divider:div.p_dividend[1]
+p_op_1[1] => barrel_shifter:sft.p_op_1[1]
+p_op_1[1] => word_comparator:cmp.p_op_1[1]
+p_op_1[1] => bit_manipulator:bop.p_op_1[1]
+p_op_1[2] => carry_select_adder:csa.p_op_1[2]
+p_op_1[2] => four_quadrant_multiplier:mul.p_op_1[2]
+p_op_1[2] => divider:div.p_dividend[2]
+p_op_1[2] => barrel_shifter:sft.p_op_1[2]
+p_op_1[2] => word_comparator:cmp.p_op_1[2]
+p_op_1[2] => bit_manipulator:bop.p_op_1[2]
+p_op_1[3] => carry_select_adder:csa.p_op_1[3]
+p_op_1[3] => four_quadrant_multiplier:mul.p_op_1[3]
+p_op_1[3] => divider:div.p_dividend[3]
+p_op_1[3] => barrel_shifter:sft.p_op_1[3]
+p_op_1[3] => word_comparator:cmp.p_op_1[3]
+p_op_1[3] => bit_manipulator:bop.p_op_1[3]
+p_op_2[0] => carry_select_adder:csa.p_op_2[0]
+p_op_2[0] => four_quadrant_multiplier:mul.p_op_2[0]
+p_op_2[0] => divider:div.p_divisor[0]
+p_op_2[0] => barrel_shifter:sft.p_op_2[0]
+p_op_2[0] => word_comparator:cmp.p_op_2[0]
+p_op_2[0] => bit_manipulator:bop.p_op_2[0]
+p_op_2[1] => carry_select_adder:csa.p_op_2[1]
+p_op_2[1] => four_quadrant_multiplier:mul.p_op_2[1]
+p_op_2[1] => divider:div.p_divisor[1]
+p_op_2[1] => barrel_shifter:sft.p_op_2[1]
+p_op_2[1] => word_comparator:cmp.p_op_2[1]
+p_op_2[1] => bit_manipulator:bop.p_op_2[1]
+p_op_2[2] => carry_select_adder:csa.p_op_2[2]
+p_op_2[2] => four_quadrant_multiplier:mul.p_op_2[2]
+p_op_2[2] => divider:div.p_divisor[2]
+p_op_2[2] => barrel_shifter:sft.p_op_2[2]
+p_op_2[2] => word_comparator:cmp.p_op_2[2]
+p_op_2[2] => bit_manipulator:bop.p_op_2[2]
+p_op_2[3] => carry_select_adder:csa.p_op_2[3]
+p_op_2[3] => four_quadrant_multiplier:mul.p_op_2[3]
+p_op_2[3] => divider:div.p_divisor[3]
+p_op_2[3] => barrel_shifter:sft.p_op_2[3]
+p_op_2[3] => word_comparator:cmp.p_op_2[3]
+p_op_2[3] => bit_manipulator:bop.p_op_2[3]
+p_cmd[0] => Equal0.IN4
+p_cmd[0] => Equal1.IN1
+p_cmd[0] => Equal2.IN4
+p_cmd[0] => Equal3.IN2
+p_cmd[0] => Equal4.IN4
+p_cmd[0] => Equal5.IN1
+p_cmd[0] => Equal6.IN4
+p_cmd[0] => Equal7.IN2
+p_cmd[0] => Equal8.IN4
+p_cmd[0] => Equal9.IN2
+p_cmd[0] => Equal10.IN4
+p_cmd[0] => Equal11.IN3
+p_cmd[0] => Equal12.IN4
+p_cmd[0] => Equal13.IN1
+p_cmd[0] => Equal14.IN4
+p_cmd[0] => Equal15.IN2
+p_cmd[0] => Equal16.IN4
+p_cmd[0] => Equal17.IN2
+p_cmd[0] => Equal18.IN4
+p_cmd[0] => Equal19.IN3
+p_cmd[0] => Equal20.IN4
+p_cmd[0] => Equal21.IN2
+p_cmd[0] => Equal22.IN4
+p_cmd[0] => Equal23.IN3
+p_cmd[0] => Equal24.IN4
+p_cmd[0] => Equal25.IN3
+p_cmd[0] => Equal26.IN4
+p_cmd[0] => Equal27.IN4
+p_cmd[1] => Equal0.IN3
+p_cmd[1] => Equal1.IN4
+p_cmd[1] => Equal2.IN1
+p_cmd[1] => Equal3.IN1
+p_cmd[1] => Equal4.IN3
+p_cmd[1] => Equal5.IN4
+p_cmd[1] => Equal6.IN1
+p_cmd[1] => Equal7.IN1
+p_cmd[1] => Equal8.IN3
+p_cmd[1] => Equal9.IN4
+p_cmd[1] => Equal10.IN2
+p_cmd[1] => Equal11.IN2
+p_cmd[1] => Equal12.IN3
+p_cmd[1] => Equal13.IN4
+p_cmd[1] => Equal14.IN1
+p_cmd[1] => Equal15.IN1
+p_cmd[1] => Equal16.IN3
+p_cmd[1] => Equal17.IN4
+p_cmd[1] => Equal18.IN2
+p_cmd[1] => Equal19.IN2
+p_cmd[1] => Equal20.IN3
+p_cmd[1] => Equal21.IN4
+p_cmd[1] => Equal22.IN2
+p_cmd[1] => Equal23.IN2
+p_cmd[1] => Equal24.IN3
+p_cmd[1] => Equal25.IN4
+p_cmd[1] => Equal26.IN3
+p_cmd[1] => Equal27.IN3
+p_cmd[2] => Equal0.IN0
+p_cmd[2] => Equal1.IN0
+p_cmd[2] => Equal2.IN0
+p_cmd[2] => Equal3.IN0
+p_cmd[2] => Equal4.IN2
+p_cmd[2] => Equal5.IN3
+p_cmd[2] => Equal6.IN3
+p_cmd[2] => Equal7.IN4
+p_cmd[2] => Equal8.IN1
+p_cmd[2] => Equal9.IN1
+p_cmd[2] => Equal10.IN1
+p_cmd[2] => Equal11.IN1
+p_cmd[2] => Equal12.IN2
+p_cmd[2] => Equal13.IN3
+p_cmd[2] => Equal14.IN3
+p_cmd[2] => Equal15.IN4
+p_cmd[2] => Equal16.IN1
+p_cmd[2] => Equal17.IN1
+p_cmd[2] => Equal18.IN1
+p_cmd[2] => Equal19.IN1
+p_cmd[2] => Equal20.IN2
+p_cmd[2] => Equal21.IN3
+p_cmd[2] => Equal22.IN3
+p_cmd[2] => Equal23.IN4
+p_cmd[2] => Equal24.IN2
+p_cmd[2] => Equal25.IN2
+p_cmd[2] => Equal26.IN2
+p_cmd[2] => Equal27.IN2
+p_cmd[3] => Equal0.IN2
+p_cmd[3] => Equal1.IN3
+p_cmd[3] => Equal2.IN3
+p_cmd[3] => Equal3.IN4
+p_cmd[3] => Equal4.IN0
+p_cmd[3] => Equal5.IN0
+p_cmd[3] => Equal6.IN0
+p_cmd[3] => Equal7.IN0
+p_cmd[3] => Equal8.IN0
+p_cmd[3] => Equal9.IN0
+p_cmd[3] => Equal10.IN0
+p_cmd[3] => Equal11.IN0
+p_cmd[3] => Equal12.IN1
+p_cmd[3] => Equal13.IN2
+p_cmd[3] => Equal14.IN2
+p_cmd[3] => Equal15.IN3
+p_cmd[3] => Equal16.IN2
+p_cmd[3] => Equal17.IN3
+p_cmd[3] => Equal18.IN3
+p_cmd[3] => Equal19.IN4
+p_cmd[3] => Equal20.IN1
+p_cmd[3] => Equal21.IN1
+p_cmd[3] => Equal22.IN1
+p_cmd[3] => Equal23.IN1
+p_cmd[3] => Equal24.IN1
+p_cmd[3] => Equal25.IN1
+p_cmd[3] => Equal26.IN1
+p_cmd[3] => Equal27.IN1
+p_cmd[4] => Equal0.IN1
+p_cmd[4] => Equal1.IN2
+p_cmd[4] => Equal2.IN2
+p_cmd[4] => Equal3.IN3
+p_cmd[4] => Equal4.IN1
+p_cmd[4] => Equal5.IN2
+p_cmd[4] => Equal6.IN2
+p_cmd[4] => Equal7.IN3
+p_cmd[4] => Equal8.IN2
+p_cmd[4] => Equal9.IN3
+p_cmd[4] => Equal10.IN3
+p_cmd[4] => Equal11.IN4
+p_cmd[4] => Equal12.IN0
+p_cmd[4] => Equal13.IN0
+p_cmd[4] => Equal14.IN0
+p_cmd[4] => Equal15.IN0
+p_cmd[4] => Equal16.IN0
+p_cmd[4] => Equal17.IN0
+p_cmd[4] => Equal18.IN0
+p_cmd[4] => Equal19.IN0
+p_cmd[4] => Equal20.IN0
+p_cmd[4] => Equal21.IN0
+p_cmd[4] => Equal22.IN0
+p_cmd[4] => Equal23.IN0
+p_cmd[4] => Equal24.IN0
+p_cmd[4] => Equal25.IN0
+p_cmd[4] => Equal26.IN0
+p_cmd[4] => Equal27.IN0
+p_ovflw <= p_ovflw.DB_MAX_OUTPUT_PORT_TYPE
+p_cmp_f <= p_cmp_f.DB_MAX_OUTPUT_PORT_TYPE
+p_result_lo[0] <= p_result_lo.DB_MAX_OUTPUT_PORT_TYPE
+p_result_lo[1] <= p_result_lo.DB_MAX_OUTPUT_PORT_TYPE
+p_result_lo[2] <= p_result_lo.DB_MAX_OUTPUT_PORT_TYPE
+p_result_lo[3] <= p_result_lo.DB_MAX_OUTPUT_PORT_TYPE
+p_result_hi[0] <= p_result_hi.DB_MAX_OUTPUT_PORT_TYPE
+p_result_hi[1] <= p_result_hi.DB_MAX_OUTPUT_PORT_TYPE
+p_result_hi[2] <= p_result_hi.DB_MAX_OUTPUT_PORT_TYPE
+p_result_hi[3] <= p_result_hi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa
+p_sgnd => p_ovflw.OUTPUTSELECT
+p_sub => carry_select_block:gen_csa:0:lsb:csb0.p_c_in
+p_sub => \gen_csa:0:s_inv_op[3].IN0
+p_sub => \gen_csa:0:s_inv_op[2].IN0
+p_sub => \gen_csa:0:s_inv_op[1].IN0
+p_sub => \gen_csa:0:s_inv_op[0].IN0
+p_op_1[0] => carry_select_block:gen_csa:0:lsb:csb0.p_op_1[0]
+p_op_1[1] => carry_select_block:gen_csa:0:lsb:csb0.p_op_1[1]
+p_op_1[2] => carry_select_block:gen_csa:0:lsb:csb0.p_op_1[2]
+p_op_1[3] => p_ovflw.IN0
+p_op_1[3] => carry_select_block:gen_csa:0:lsb:csb0.p_op_1[3]
+p_op_1[3] => p_ovflw.IN0
+p_op_2[0] => \gen_csa:0:s_inv_op[0].IN1
+p_op_2[1] => \gen_csa:0:s_inv_op[1].IN1
+p_op_2[2] => \gen_csa:0:s_inv_op[2].IN1
+p_op_2[3] => \gen_csa:0:s_inv_op[3].IN1
+p_op_2[3] => p_ovflw.IN1
+p_op_2[3] => p_ovflw.IN1
+p_result[0] <= carry_select_block:gen_csa:0:lsb:csb0.p_result[0]
+p_result[1] <= carry_select_block:gen_csa:0:lsb:csb0.p_result[1]
+p_result[2] <= carry_select_block:gen_csa:0:lsb:csb0.p_result[2]
+p_result[3] <= carry_select_block:gen_csa:0:lsb:csb0.p_result[3]
+p_ovflw <= p_ovflw.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0
+p_c_in => p_result.OUTPUTSELECT
+p_c_in => p_result.OUTPUTSELECT
+p_c_in => p_result.OUTPUTSELECT
+p_c_in => p_result.OUTPUTSELECT
+p_c_in => p_c_out.OUTPUTSELECT
+p_op_1[0] => carry_ripple_adder:c_0_cra.p_op_1[0]
+p_op_1[0] => carry_ripple_adder:c_1_cra.p_op_1[0]
+p_op_1[1] => carry_ripple_adder:c_0_cra.p_op_1[1]
+p_op_1[1] => carry_ripple_adder:c_1_cra.p_op_1[1]
+p_op_1[2] => carry_ripple_adder:c_0_cra.p_op_1[2]
+p_op_1[2] => carry_ripple_adder:c_1_cra.p_op_1[2]
+p_op_1[3] => carry_ripple_adder:c_0_cra.p_op_1[3]
+p_op_1[3] => carry_ripple_adder:c_1_cra.p_op_1[3]
+p_op_2[0] => carry_ripple_adder:c_0_cra.p_op_2[0]
+p_op_2[0] => carry_ripple_adder:c_1_cra.p_op_2[0]
+p_op_2[1] => carry_ripple_adder:c_0_cra.p_op_2[1]
+p_op_2[1] => carry_ripple_adder:c_1_cra.p_op_2[1]
+p_op_2[2] => carry_ripple_adder:c_0_cra.p_op_2[2]
+p_op_2[2] => carry_ripple_adder:c_1_cra.p_op_2[2]
+p_op_2[3] => carry_ripple_adder:c_0_cra.p_op_2[3]
+p_op_2[3] => carry_ripple_adder:c_1_cra.p_op_2[3]
+p_result[0] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[1] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[2] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[3] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra
+p_c_in => full_adder:cra:0:lsb:fa_0.p_c_in
+p_op_2[0] => full_adder:cra:0:lsb:fa_0.p_y
+p_op_2[1] => full_adder:cra:1:msbs:fa_i.p_y
+p_op_2[2] => full_adder:cra:2:msbs:fa_i.p_y
+p_op_2[3] => full_adder:cra:3:msbs:fa_i.p_y
+p_op_1[0] => full_adder:cra:0:lsb:fa_0.p_x
+p_op_1[1] => full_adder:cra:1:msbs:fa_i.p_x
+p_op_1[2] => full_adder:cra:2:msbs:fa_i.p_x
+p_op_1[3] => full_adder:cra:3:msbs:fa_i.p_x
+p_result[0] <= full_adder:cra:0:lsb:fa_0.p_s
+p_result[1] <= full_adder:cra:1:msbs:fa_i.p_s
+p_result[2] <= full_adder:cra:2:msbs:fa_i.p_s
+p_result[3] <= full_adder:cra:3:msbs:fa_i.p_s
+p_c_out <= full_adder:cra:3:msbs:fa_i.p_c_out
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:0:lsb:fa_0
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:1:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:2:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:3:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_0_cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra
+p_c_in => full_adder:cra:0:lsb:fa_0.p_c_in
+p_op_2[0] => full_adder:cra:0:lsb:fa_0.p_y
+p_op_2[1] => full_adder:cra:1:msbs:fa_i.p_y
+p_op_2[2] => full_adder:cra:2:msbs:fa_i.p_y
+p_op_2[3] => full_adder:cra:3:msbs:fa_i.p_y
+p_op_1[0] => full_adder:cra:0:lsb:fa_0.p_x
+p_op_1[1] => full_adder:cra:1:msbs:fa_i.p_x
+p_op_1[2] => full_adder:cra:2:msbs:fa_i.p_x
+p_op_1[3] => full_adder:cra:3:msbs:fa_i.p_x
+p_result[0] <= full_adder:cra:0:lsb:fa_0.p_s
+p_result[1] <= full_adder:cra:1:msbs:fa_i.p_s
+p_result[2] <= full_adder:cra:2:msbs:fa_i.p_s
+p_result[3] <= full_adder:cra:3:msbs:fa_i.p_s
+p_c_out <= full_adder:cra:3:msbs:fa_i.p_c_out
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:0:lsb:fa_0
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:1:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:2:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:3:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|carry_select_adder:csa|carry_select_block:\gen_csa:0:lsb:csb0|carry_ripple_adder:c_1_cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul
+p_sgnd => \gen_cra:3:s_tc.IN0
+p_sgnd => multiplier_slice:gen_cra:0:lsb:ms_0.p_sgnd
+p_sgnd => \gen_cra:3:a_s_in[3].IN0
+p_sgnd => \gen_cra:3:a_s_in[2].IN0
+p_sgnd => \gen_cra:3:a_s_in[1].IN0
+p_sgnd => \gen_cra:3:a_s_in[0].IN0
+p_sgnd => multiplier_slice:gen_cra:1:bet:ms_i.p_sgnd
+p_sgnd => multiplier_slice:gen_cra:2:bet:ms_i.p_sgnd
+p_sgnd => multiplier_slice:gen_cra:3:msb:ms_s.p_sgnd
+p_op_1[0] => \gen_cra:3:a_s_in[0].IN1
+p_op_1[0] => multiplier_slice:gen_cra:0:lsb:ms_0.p_a_in[0]
+p_op_1[0] => multiplier_slice:gen_cra:1:bet:ms_i.p_a_in[0]
+p_op_1[0] => multiplier_slice:gen_cra:2:bet:ms_i.p_a_in[0]
+p_op_1[1] => \gen_cra:3:a_s_in[1].IN1
+p_op_1[1] => multiplier_slice:gen_cra:0:lsb:ms_0.p_a_in[1]
+p_op_1[1] => multiplier_slice:gen_cra:1:bet:ms_i.p_a_in[1]
+p_op_1[1] => multiplier_slice:gen_cra:2:bet:ms_i.p_a_in[1]
+p_op_1[2] => \gen_cra:3:a_s_in[2].IN1
+p_op_1[2] => multiplier_slice:gen_cra:0:lsb:ms_0.p_a_in[2]
+p_op_1[2] => multiplier_slice:gen_cra:1:bet:ms_i.p_a_in[2]
+p_op_1[2] => multiplier_slice:gen_cra:2:bet:ms_i.p_a_in[2]
+p_op_1[3] => \gen_cra:3:a_s_in[3].IN1
+p_op_1[3] => multiplier_slice:gen_cra:0:lsb:ms_0.p_a_in[3]
+p_op_1[3] => multiplier_slice:gen_cra:1:bet:ms_i.p_a_in[3]
+p_op_1[3] => multiplier_slice:gen_cra:2:bet:ms_i.p_a_in[3]
+p_op_2[0] => multiplier_slice:gen_cra:0:lsb:ms_0.p_x_in
+p_op_2[1] => multiplier_slice:gen_cra:1:bet:ms_i.p_x_in
+p_op_2[2] => multiplier_slice:gen_cra:2:bet:ms_i.p_x_in
+p_op_2[3] => \gen_cra:3:s_tc.IN1
+p_op_2[3] => multiplier_slice:gen_cra:3:msb:ms_s.p_x_in
+p_add[0] => multiplier_slice:gen_cra:0:lsb:ms_0.p_s_in[0]
+p_add[1] => multiplier_slice:gen_cra:0:lsb:ms_0.p_s_in[1]
+p_add[2] => multiplier_slice:gen_cra:0:lsb:ms_0.p_s_in[2]
+p_add[3] => multiplier_slice:gen_cra:0:lsb:ms_0.p_s_in[3]
+p_result_lo[0] <= multiplier_slice:gen_cra:0:lsb:ms_0.p_result[0]
+p_result_lo[1] <= multiplier_slice:gen_cra:1:bet:ms_i.p_result[0]
+p_result_lo[2] <= multiplier_slice:gen_cra:2:bet:ms_i.p_result[0]
+p_result_lo[3] <= multiplier_slice:gen_cra:3:msb:ms_s.p_result[0]
+p_result_hi[0] <= multiplier_slice:gen_cra:3:msb:ms_s.p_result[1]
+p_result_hi[1] <= multiplier_slice:gen_cra:3:msb:ms_s.p_result[2]
+p_result_hi[2] <= multiplier_slice:gen_cra:3:msb:ms_s.p_result[3]
+p_result_hi[3] <= multiplier_slice:gen_cra:3:msb:ms_s.p_result[4]
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0
+p_sgnd => p_result.IN1
+p_sgnd => p_result.IN1
+p_x_in => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:1:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:2:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:3:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:4:msb:mbcs.p_x_in
+p_c_in => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_c_in
+p_s_in[0] => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_s_in
+p_s_in[1] => multiplier_base_cell:gen_cra:1:bet:mbci.p_s_in
+p_s_in[2] => multiplier_base_cell:gen_cra:2:bet:mbci.p_s_in
+p_s_in[3] => multiplier_base_cell:gen_cra:3:bet:mbci.p_s_in
+p_s_in[3] => multiplier_base_cell:gen_cra:4:msb:mbcs.p_s_in
+p_a_in[0] => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_a_in
+p_a_in[1] => multiplier_base_cell:gen_cra:1:bet:mbci.p_a_in
+p_a_in[2] => multiplier_base_cell:gen_cra:2:bet:mbci.p_a_in
+p_a_in[3] => multiplier_base_cell:gen_cra:3:bet:mbci.p_a_in
+p_a_in[3] => multiplier_base_cell:gen_cra:4:msb:mbcs.p_a_in
+p_result[0] <= multiplier_base_cell:gen_cra:0:lsb:mbc0.p_s_out
+p_result[1] <= multiplier_base_cell:gen_cra:1:bet:mbci.p_s_out
+p_result[2] <= multiplier_base_cell:gen_cra:2:bet:mbci.p_s_out
+p_result[3] <= multiplier_base_cell:gen_cra:3:bet:mbci.p_s_out
+p_result[4] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:0:lsb:mbc0
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:1:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:2:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:3:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:4:msb:mbcs
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:0:lsb:ms_0|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i
+p_sgnd => p_result.IN1
+p_sgnd => p_result.IN1
+p_x_in => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:1:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:2:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:3:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:4:msb:mbcs.p_x_in
+p_c_in => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_c_in
+p_s_in[0] => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_s_in
+p_s_in[1] => multiplier_base_cell:gen_cra:1:bet:mbci.p_s_in
+p_s_in[2] => multiplier_base_cell:gen_cra:2:bet:mbci.p_s_in
+p_s_in[3] => multiplier_base_cell:gen_cra:3:bet:mbci.p_s_in
+p_s_in[3] => multiplier_base_cell:gen_cra:4:msb:mbcs.p_s_in
+p_a_in[0] => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_a_in
+p_a_in[1] => multiplier_base_cell:gen_cra:1:bet:mbci.p_a_in
+p_a_in[2] => multiplier_base_cell:gen_cra:2:bet:mbci.p_a_in
+p_a_in[3] => multiplier_base_cell:gen_cra:3:bet:mbci.p_a_in
+p_a_in[3] => multiplier_base_cell:gen_cra:4:msb:mbcs.p_a_in
+p_result[0] <= multiplier_base_cell:gen_cra:0:lsb:mbc0.p_s_out
+p_result[1] <= multiplier_base_cell:gen_cra:1:bet:mbci.p_s_out
+p_result[2] <= multiplier_base_cell:gen_cra:2:bet:mbci.p_s_out
+p_result[3] <= multiplier_base_cell:gen_cra:3:bet:mbci.p_s_out
+p_result[4] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:4:msb:mbcs
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:1:bet:ms_i|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i
+p_sgnd => p_result.IN1
+p_sgnd => p_result.IN1
+p_x_in => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:1:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:2:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:3:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:4:msb:mbcs.p_x_in
+p_c_in => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_c_in
+p_s_in[0] => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_s_in
+p_s_in[1] => multiplier_base_cell:gen_cra:1:bet:mbci.p_s_in
+p_s_in[2] => multiplier_base_cell:gen_cra:2:bet:mbci.p_s_in
+p_s_in[3] => multiplier_base_cell:gen_cra:3:bet:mbci.p_s_in
+p_s_in[3] => multiplier_base_cell:gen_cra:4:msb:mbcs.p_s_in
+p_a_in[0] => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_a_in
+p_a_in[1] => multiplier_base_cell:gen_cra:1:bet:mbci.p_a_in
+p_a_in[2] => multiplier_base_cell:gen_cra:2:bet:mbci.p_a_in
+p_a_in[3] => multiplier_base_cell:gen_cra:3:bet:mbci.p_a_in
+p_a_in[3] => multiplier_base_cell:gen_cra:4:msb:mbcs.p_a_in
+p_result[0] <= multiplier_base_cell:gen_cra:0:lsb:mbc0.p_s_out
+p_result[1] <= multiplier_base_cell:gen_cra:1:bet:mbci.p_s_out
+p_result[2] <= multiplier_base_cell:gen_cra:2:bet:mbci.p_s_out
+p_result[3] <= multiplier_base_cell:gen_cra:3:bet:mbci.p_s_out
+p_result[4] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:4:msb:mbcs
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:2:bet:ms_i|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s
+p_sgnd => p_result.IN1
+p_sgnd => p_result.IN1
+p_x_in => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:1:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:2:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:3:bet:mbci.p_x_in
+p_x_in => multiplier_base_cell:gen_cra:4:msb:mbcs.p_x_in
+p_c_in => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_c_in
+p_s_in[0] => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_s_in
+p_s_in[1] => multiplier_base_cell:gen_cra:1:bet:mbci.p_s_in
+p_s_in[2] => multiplier_base_cell:gen_cra:2:bet:mbci.p_s_in
+p_s_in[3] => multiplier_base_cell:gen_cra:3:bet:mbci.p_s_in
+p_s_in[3] => multiplier_base_cell:gen_cra:4:msb:mbcs.p_s_in
+p_a_in[0] => multiplier_base_cell:gen_cra:0:lsb:mbc0.p_a_in
+p_a_in[1] => multiplier_base_cell:gen_cra:1:bet:mbci.p_a_in
+p_a_in[2] => multiplier_base_cell:gen_cra:2:bet:mbci.p_a_in
+p_a_in[3] => multiplier_base_cell:gen_cra:3:bet:mbci.p_a_in
+p_a_in[3] => multiplier_base_cell:gen_cra:4:msb:mbcs.p_a_in
+p_result[0] <= multiplier_base_cell:gen_cra:0:lsb:mbc0.p_s_out
+p_result[1] <= multiplier_base_cell:gen_cra:1:bet:mbci.p_s_out
+p_result[2] <= multiplier_base_cell:gen_cra:2:bet:mbci.p_s_out
+p_result[3] <= multiplier_base_cell:gen_cra:3:bet:mbci.p_s_out
+p_result[4] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:0:lsb:mbc0
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:0:lsb:mbc0|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:1:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:1:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:2:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:2:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:3:bet:mbci
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:3:bet:mbci|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:4:msb:mbcs
+p_s_in => full_adder:fa.p_x
+p_a_in => s_a_and_x.IN0
+p_x_in => s_a_and_x.IN1
+p_c_in => full_adder:fa.p_c_in
+p_s_out <= full_adder:fa.p_s
+p_c_out <= full_adder:fa.p_c_out
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|four_quadrant_multiplier:mul|multiplier_slice:\gen_cra:3:msb:ms_s|multiplier_base_cell:\gen_cra:4:msb:mbcs|full_adder:fa|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div
+p_sgnd => s_exp_dividend[4].IN0
+p_sgnd => s_exp_divisor[4].IN0
+p_sgnd => p_result.IN1
+p_sgnd => p_remain.IN0
+p_sgnd => p_remain.IN1
+p_sgnd => p_result.IN1
+p_dividend[0] => absolute:abs_dividend.p_in[0]
+p_dividend[1] => absolute:abs_dividend.p_in[1]
+p_dividend[2] => absolute:abs_dividend.p_in[2]
+p_dividend[3] => s_exp_dividend[4].IN1
+p_dividend[3] => p_result.IN0
+p_dividend[3] => absolute:abs_dividend.p_in[3]
+p_dividend[3] => p_remain.IN1
+p_divisor[0] => absolute:abs_divisor.p_in[0]
+p_divisor[1] => absolute:abs_divisor.p_in[1]
+p_divisor[2] => absolute:abs_divisor.p_in[2]
+p_divisor[3] => s_exp_divisor[4].IN1
+p_divisor[3] => p_result.IN1
+p_divisor[3] => absolute:abs_divisor.p_in[3]
+p_remain[0] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[1] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[2] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[3] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_result[0] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[1] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[2] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[3] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|absolute:abs_dividend
+p_in[0] => p_out.DATAB
+p_in[0] => tc_converter:tcc.p_in[0]
+p_in[1] => p_out.DATAB
+p_in[1] => tc_converter:tcc.p_in[1]
+p_in[2] => p_out.DATAB
+p_in[2] => tc_converter:tcc.p_in[2]
+p_in[3] => p_out.DATAB
+p_in[3] => tc_converter:tcc.p_in[3]
+p_in[4] => tc_converter:tcc.p_in[4]
+p_in[4] => p_out.OUTPUTSELECT
+p_in[4] => p_out.OUTPUTSELECT
+p_in[4] => p_out.OUTPUTSELECT
+p_in[4] => p_out.OUTPUTSELECT
+p_in[4] => p_out.OUTPUTSELECT
+p_out[0] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|absolute:abs_dividend|tc_converter:tcc
+p_in[0] => s_wires[1].IN0
+p_in[0] => p_out.IN0
+p_in[0] => p_out[0].DATAIN
+p_in[1] => s_wires[1].IN1
+p_in[1] => p_out.IN1
+p_in[2] => s_wires[2].IN1
+p_in[2] => p_out.IN1
+p_in[3] => s_wires[3].IN1
+p_in[3] => p_out.IN1
+p_in[4] => p_out.IN1
+p_out[0] <= p_in[0].DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|absolute:abs_divisor
+p_in[0] => p_out.DATAB
+p_in[0] => tc_converter:tcc.p_in[0]
+p_in[1] => p_out.DATAB
+p_in[1] => tc_converter:tcc.p_in[1]
+p_in[2] => p_out.DATAB
+p_in[2] => tc_converter:tcc.p_in[2]
+p_in[3] => p_out.DATAB
+p_in[3] => tc_converter:tcc.p_in[3]
+p_in[4] => tc_converter:tcc.p_in[4]
+p_in[4] => p_out.OUTPUTSELECT
+p_in[4] => p_out.OUTPUTSELECT
+p_in[4] => p_out.OUTPUTSELECT
+p_in[4] => p_out.OUTPUTSELECT
+p_in[4] => p_out.OUTPUTSELECT
+p_out[0] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|absolute:abs_divisor|tc_converter:tcc
+p_in[0] => s_wires[1].IN0
+p_in[0] => p_out.IN0
+p_in[0] => p_out[0].DATAIN
+p_in[1] => s_wires[1].IN1
+p_in[1] => p_out.IN1
+p_in[2] => s_wires[2].IN1
+p_in[2] => p_out.IN1
+p_in[3] => s_wires[3].IN1
+p_in[3] => p_out.IN1
+p_in[4] => p_out.IN1
+p_out[0] <= p_in[0].DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div
+p_dividend[0] => divider_slice:gen_d:4:msbs:ds_i.p_dividend[0]
+p_dividend[1] => divider_slice:gen_d:3:msbs:ds_i.p_dividend[0]
+p_dividend[2] => divider_slice:gen_d:2:msbs:ds_i.p_dividend[0]
+p_dividend[3] => divider_slice:gen_d:1:msbs:ds_i.p_dividend[0]
+p_dividend[4] => divider_slice:gen_d:0:lsb:ds_0.p_dividend[0]
+p_divisor[0] => divider_slice:gen_d:0:lsb:ds_0.p_divisor[0]
+p_divisor[0] => divider_slice:gen_d:1:msbs:ds_i.p_divisor[0]
+p_divisor[0] => divider_slice:gen_d:2:msbs:ds_i.p_divisor[0]
+p_divisor[0] => divider_slice:gen_d:3:msbs:ds_i.p_divisor[0]
+p_divisor[0] => divider_slice:gen_d:4:msbs:ds_i.p_divisor[0]
+p_divisor[1] => divider_slice:gen_d:0:lsb:ds_0.p_divisor[1]
+p_divisor[1] => divider_slice:gen_d:1:msbs:ds_i.p_divisor[1]
+p_divisor[1] => divider_slice:gen_d:2:msbs:ds_i.p_divisor[1]
+p_divisor[1] => divider_slice:gen_d:3:msbs:ds_i.p_divisor[1]
+p_divisor[1] => divider_slice:gen_d:4:msbs:ds_i.p_divisor[1]
+p_divisor[2] => divider_slice:gen_d:0:lsb:ds_0.p_divisor[2]
+p_divisor[2] => divider_slice:gen_d:1:msbs:ds_i.p_divisor[2]
+p_divisor[2] => divider_slice:gen_d:2:msbs:ds_i.p_divisor[2]
+p_divisor[2] => divider_slice:gen_d:3:msbs:ds_i.p_divisor[2]
+p_divisor[2] => divider_slice:gen_d:4:msbs:ds_i.p_divisor[2]
+p_divisor[3] => divider_slice:gen_d:0:lsb:ds_0.p_divisor[3]
+p_divisor[3] => divider_slice:gen_d:1:msbs:ds_i.p_divisor[3]
+p_divisor[3] => divider_slice:gen_d:2:msbs:ds_i.p_divisor[3]
+p_divisor[3] => divider_slice:gen_d:3:msbs:ds_i.p_divisor[3]
+p_divisor[3] => divider_slice:gen_d:4:msbs:ds_i.p_divisor[3]
+p_divisor[4] => divider_slice:gen_d:0:lsb:ds_0.p_divisor[4]
+p_divisor[4] => divider_slice:gen_d:1:msbs:ds_i.p_divisor[4]
+p_divisor[4] => divider_slice:gen_d:2:msbs:ds_i.p_divisor[4]
+p_divisor[4] => divider_slice:gen_d:3:msbs:ds_i.p_divisor[4]
+p_divisor[4] => divider_slice:gen_d:4:msbs:ds_i.p_divisor[4]
+p_remain[0] <= divider_slice:gen_d:4:msbs:ds_i.p_remain[0]
+p_remain[1] <= divider_slice:gen_d:4:msbs:ds_i.p_remain[1]
+p_remain[2] <= divider_slice:gen_d:4:msbs:ds_i.p_remain[2]
+p_remain[3] <= divider_slice:gen_d:4:msbs:ds_i.p_remain[3]
+p_remain[4] <= divider_slice:gen_d:4:msbs:ds_i.p_remain[4]
+p_result[0] <= divider_slice:gen_d:4:msbs:ds_i.p_c_out
+p_result[1] <= divider_slice:gen_d:3:msbs:ds_i.p_c_out
+p_result[2] <= divider_slice:gen_d:2:msbs:ds_i.p_c_out
+p_result[3] <= divider_slice:gen_d:1:msbs:ds_i.p_c_out
+p_result[4] <= divider_slice:gen_d:0:lsb:ds_0.p_c_out
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_dividend[0] => p_remain.DATAA
+p_dividend[0] => carry_ripple_adder:cra.p_op_1[0]
+p_dividend[1] => p_remain.DATAA
+p_dividend[1] => carry_ripple_adder:cra.p_op_1[1]
+p_dividend[2] => p_remain.DATAA
+p_dividend[2] => carry_ripple_adder:cra.p_op_1[2]
+p_dividend[3] => p_remain.DATAA
+p_dividend[3] => carry_ripple_adder:cra.p_op_1[3]
+p_dividend[4] => p_remain.DATAA
+p_dividend[4] => carry_ripple_adder:cra.p_op_1[4]
+p_divisor[0] => carry_ripple_adder:cra.p_op_2[0]
+p_divisor[1] => carry_ripple_adder:cra.p_op_2[1]
+p_divisor[2] => carry_ripple_adder:cra.p_op_2[2]
+p_divisor[3] => carry_ripple_adder:cra.p_op_2[3]
+p_divisor[4] => carry_ripple_adder:cra.p_op_2[4]
+p_c_out <= carry_ripple_adder:cra.p_c_out
+p_remain[0] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[1] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[2] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[3] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[4] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra
+p_c_in => full_adder:cra:0:lsb:fa_0.p_c_in
+p_op_2[0] => full_adder:cra:0:lsb:fa_0.p_y
+p_op_2[1] => full_adder:cra:1:msbs:fa_i.p_y
+p_op_2[2] => full_adder:cra:2:msbs:fa_i.p_y
+p_op_2[3] => full_adder:cra:3:msbs:fa_i.p_y
+p_op_2[4] => full_adder:cra:4:msbs:fa_i.p_y
+p_op_1[0] => full_adder:cra:0:lsb:fa_0.p_x
+p_op_1[1] => full_adder:cra:1:msbs:fa_i.p_x
+p_op_1[2] => full_adder:cra:2:msbs:fa_i.p_x
+p_op_1[3] => full_adder:cra:3:msbs:fa_i.p_x
+p_op_1[4] => full_adder:cra:4:msbs:fa_i.p_x
+p_result[0] <= full_adder:cra:0:lsb:fa_0.p_s
+p_result[1] <= full_adder:cra:1:msbs:fa_i.p_s
+p_result[2] <= full_adder:cra:2:msbs:fa_i.p_s
+p_result[3] <= full_adder:cra:3:msbs:fa_i.p_s
+p_result[4] <= full_adder:cra:4:msbs:fa_i.p_s
+p_c_out <= full_adder:cra:4:msbs:fa_i.p_c_out
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:0:lsb:ds_0|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_dividend[0] => p_remain.DATAA
+p_dividend[0] => carry_ripple_adder:cra.p_op_1[0]
+p_dividend[1] => p_remain.DATAA
+p_dividend[1] => carry_ripple_adder:cra.p_op_1[1]
+p_dividend[2] => p_remain.DATAA
+p_dividend[2] => carry_ripple_adder:cra.p_op_1[2]
+p_dividend[3] => p_remain.DATAA
+p_dividend[3] => carry_ripple_adder:cra.p_op_1[3]
+p_dividend[4] => p_remain.DATAA
+p_dividend[4] => carry_ripple_adder:cra.p_op_1[4]
+p_divisor[0] => carry_ripple_adder:cra.p_op_2[0]
+p_divisor[1] => carry_ripple_adder:cra.p_op_2[1]
+p_divisor[2] => carry_ripple_adder:cra.p_op_2[2]
+p_divisor[3] => carry_ripple_adder:cra.p_op_2[3]
+p_divisor[4] => carry_ripple_adder:cra.p_op_2[4]
+p_c_out <= carry_ripple_adder:cra.p_c_out
+p_remain[0] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[1] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[2] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[3] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[4] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra
+p_c_in => full_adder:cra:0:lsb:fa_0.p_c_in
+p_op_2[0] => full_adder:cra:0:lsb:fa_0.p_y
+p_op_2[1] => full_adder:cra:1:msbs:fa_i.p_y
+p_op_2[2] => full_adder:cra:2:msbs:fa_i.p_y
+p_op_2[3] => full_adder:cra:3:msbs:fa_i.p_y
+p_op_2[4] => full_adder:cra:4:msbs:fa_i.p_y
+p_op_1[0] => full_adder:cra:0:lsb:fa_0.p_x
+p_op_1[1] => full_adder:cra:1:msbs:fa_i.p_x
+p_op_1[2] => full_adder:cra:2:msbs:fa_i.p_x
+p_op_1[3] => full_adder:cra:3:msbs:fa_i.p_x
+p_op_1[4] => full_adder:cra:4:msbs:fa_i.p_x
+p_result[0] <= full_adder:cra:0:lsb:fa_0.p_s
+p_result[1] <= full_adder:cra:1:msbs:fa_i.p_s
+p_result[2] <= full_adder:cra:2:msbs:fa_i.p_s
+p_result[3] <= full_adder:cra:3:msbs:fa_i.p_s
+p_result[4] <= full_adder:cra:4:msbs:fa_i.p_s
+p_c_out <= full_adder:cra:4:msbs:fa_i.p_c_out
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:1:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_dividend[0] => p_remain.DATAA
+p_dividend[0] => carry_ripple_adder:cra.p_op_1[0]
+p_dividend[1] => p_remain.DATAA
+p_dividend[1] => carry_ripple_adder:cra.p_op_1[1]
+p_dividend[2] => p_remain.DATAA
+p_dividend[2] => carry_ripple_adder:cra.p_op_1[2]
+p_dividend[3] => p_remain.DATAA
+p_dividend[3] => carry_ripple_adder:cra.p_op_1[3]
+p_dividend[4] => p_remain.DATAA
+p_dividend[4] => carry_ripple_adder:cra.p_op_1[4]
+p_divisor[0] => carry_ripple_adder:cra.p_op_2[0]
+p_divisor[1] => carry_ripple_adder:cra.p_op_2[1]
+p_divisor[2] => carry_ripple_adder:cra.p_op_2[2]
+p_divisor[3] => carry_ripple_adder:cra.p_op_2[3]
+p_divisor[4] => carry_ripple_adder:cra.p_op_2[4]
+p_c_out <= carry_ripple_adder:cra.p_c_out
+p_remain[0] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[1] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[2] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[3] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[4] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra
+p_c_in => full_adder:cra:0:lsb:fa_0.p_c_in
+p_op_2[0] => full_adder:cra:0:lsb:fa_0.p_y
+p_op_2[1] => full_adder:cra:1:msbs:fa_i.p_y
+p_op_2[2] => full_adder:cra:2:msbs:fa_i.p_y
+p_op_2[3] => full_adder:cra:3:msbs:fa_i.p_y
+p_op_2[4] => full_adder:cra:4:msbs:fa_i.p_y
+p_op_1[0] => full_adder:cra:0:lsb:fa_0.p_x
+p_op_1[1] => full_adder:cra:1:msbs:fa_i.p_x
+p_op_1[2] => full_adder:cra:2:msbs:fa_i.p_x
+p_op_1[3] => full_adder:cra:3:msbs:fa_i.p_x
+p_op_1[4] => full_adder:cra:4:msbs:fa_i.p_x
+p_result[0] <= full_adder:cra:0:lsb:fa_0.p_s
+p_result[1] <= full_adder:cra:1:msbs:fa_i.p_s
+p_result[2] <= full_adder:cra:2:msbs:fa_i.p_s
+p_result[3] <= full_adder:cra:3:msbs:fa_i.p_s
+p_result[4] <= full_adder:cra:4:msbs:fa_i.p_s
+p_c_out <= full_adder:cra:4:msbs:fa_i.p_c_out
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:2:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_dividend[0] => p_remain.DATAA
+p_dividend[0] => carry_ripple_adder:cra.p_op_1[0]
+p_dividend[1] => p_remain.DATAA
+p_dividend[1] => carry_ripple_adder:cra.p_op_1[1]
+p_dividend[2] => p_remain.DATAA
+p_dividend[2] => carry_ripple_adder:cra.p_op_1[2]
+p_dividend[3] => p_remain.DATAA
+p_dividend[3] => carry_ripple_adder:cra.p_op_1[3]
+p_dividend[4] => p_remain.DATAA
+p_dividend[4] => carry_ripple_adder:cra.p_op_1[4]
+p_divisor[0] => carry_ripple_adder:cra.p_op_2[0]
+p_divisor[1] => carry_ripple_adder:cra.p_op_2[1]
+p_divisor[2] => carry_ripple_adder:cra.p_op_2[2]
+p_divisor[3] => carry_ripple_adder:cra.p_op_2[3]
+p_divisor[4] => carry_ripple_adder:cra.p_op_2[4]
+p_c_out <= carry_ripple_adder:cra.p_c_out
+p_remain[0] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[1] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[2] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[3] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[4] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra
+p_c_in => full_adder:cra:0:lsb:fa_0.p_c_in
+p_op_2[0] => full_adder:cra:0:lsb:fa_0.p_y
+p_op_2[1] => full_adder:cra:1:msbs:fa_i.p_y
+p_op_2[2] => full_adder:cra:2:msbs:fa_i.p_y
+p_op_2[3] => full_adder:cra:3:msbs:fa_i.p_y
+p_op_2[4] => full_adder:cra:4:msbs:fa_i.p_y
+p_op_1[0] => full_adder:cra:0:lsb:fa_0.p_x
+p_op_1[1] => full_adder:cra:1:msbs:fa_i.p_x
+p_op_1[2] => full_adder:cra:2:msbs:fa_i.p_x
+p_op_1[3] => full_adder:cra:3:msbs:fa_i.p_x
+p_op_1[4] => full_adder:cra:4:msbs:fa_i.p_x
+p_result[0] <= full_adder:cra:0:lsb:fa_0.p_s
+p_result[1] <= full_adder:cra:1:msbs:fa_i.p_s
+p_result[2] <= full_adder:cra:2:msbs:fa_i.p_s
+p_result[3] <= full_adder:cra:3:msbs:fa_i.p_s
+p_result[4] <= full_adder:cra:4:msbs:fa_i.p_s
+p_c_out <= full_adder:cra:4:msbs:fa_i.p_c_out
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:3:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_m_in => p_remain.OUTPUTSELECT
+p_dividend[0] => p_remain.DATAA
+p_dividend[0] => carry_ripple_adder:cra.p_op_1[0]
+p_dividend[1] => p_remain.DATAA
+p_dividend[1] => carry_ripple_adder:cra.p_op_1[1]
+p_dividend[2] => p_remain.DATAA
+p_dividend[2] => carry_ripple_adder:cra.p_op_1[2]
+p_dividend[3] => p_remain.DATAA
+p_dividend[3] => carry_ripple_adder:cra.p_op_1[3]
+p_dividend[4] => p_remain.DATAA
+p_dividend[4] => carry_ripple_adder:cra.p_op_1[4]
+p_divisor[0] => carry_ripple_adder:cra.p_op_2[0]
+p_divisor[1] => carry_ripple_adder:cra.p_op_2[1]
+p_divisor[2] => carry_ripple_adder:cra.p_op_2[2]
+p_divisor[3] => carry_ripple_adder:cra.p_op_2[3]
+p_divisor[4] => carry_ripple_adder:cra.p_op_2[4]
+p_c_out <= carry_ripple_adder:cra.p_c_out
+p_remain[0] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[1] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[2] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[3] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+p_remain[4] <= p_remain.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra
+p_c_in => full_adder:cra:0:lsb:fa_0.p_c_in
+p_op_2[0] => full_adder:cra:0:lsb:fa_0.p_y
+p_op_2[1] => full_adder:cra:1:msbs:fa_i.p_y
+p_op_2[2] => full_adder:cra:2:msbs:fa_i.p_y
+p_op_2[3] => full_adder:cra:3:msbs:fa_i.p_y
+p_op_2[4] => full_adder:cra:4:msbs:fa_i.p_y
+p_op_1[0] => full_adder:cra:0:lsb:fa_0.p_x
+p_op_1[1] => full_adder:cra:1:msbs:fa_i.p_x
+p_op_1[2] => full_adder:cra:2:msbs:fa_i.p_x
+p_op_1[3] => full_adder:cra:3:msbs:fa_i.p_x
+p_op_1[4] => full_adder:cra:4:msbs:fa_i.p_x
+p_result[0] <= full_adder:cra:0:lsb:fa_0.p_s
+p_result[1] <= full_adder:cra:1:msbs:fa_i.p_s
+p_result[2] <= full_adder:cra:2:msbs:fa_i.p_s
+p_result[3] <= full_adder:cra:3:msbs:fa_i.p_s
+p_result[4] <= full_adder:cra:4:msbs:fa_i.p_s
+p_c_out <= full_adder:cra:4:msbs:fa_i.p_c_out
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:0:lsb:fa_0|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:1:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:2:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:3:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i
+p_x => half_adder:ha1.p_x
+p_y => half_adder:ha1.p_y
+p_c_in => half_adder:ha2.p_y
+p_s <= half_adder:ha2.p_s
+p_c_out <= p_c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha1
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|restoring_divider:div|divider_slice:\gen_d:4:msbs:ds_i|carry_ripple_adder:cra|full_adder:\cra:4:msbs:fa_i|half_adder:ha2
+p_x => p_s.IN0
+p_x => p_c.IN0
+p_y => p_s.IN1
+p_y => p_c.IN1
+p_s <= p_s.DB_MAX_OUTPUT_PORT_TYPE
+p_c <= p_c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|tc_converter:conv_res
+p_in[0] => s_wires[1].IN0
+p_in[0] => p_out.IN0
+p_in[0] => p_out[0].DATAIN
+p_in[1] => s_wires[1].IN1
+p_in[1] => p_out.IN1
+p_in[2] => s_wires[2].IN1
+p_in[2] => p_out.IN1
+p_in[3] => s_wires[3].IN1
+p_in[3] => p_out.IN1
+p_in[4] => p_out.IN1
+p_out[0] <= p_in[0].DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|divider:div|tc_converter:conv_rem
+p_in[0] => s_wires[1].IN0
+p_in[0] => p_out.IN0
+p_in[0] => p_out[0].DATAIN
+p_in[1] => s_wires[1].IN1
+p_in[1] => p_out.IN1
+p_in[2] => s_wires[2].IN1
+p_in[2] => p_out.IN1
+p_in[3] => s_wires[3].IN1
+p_in[3] => p_out.IN1
+p_in[4] => p_out.IN1
+p_out[0] <= p_in[0].DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= p_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|barrel_shifter:sft
+p_cmd[0] => s_ctrl[0][0].IN0
+p_cmd[0] => s_ctrl[1][0].IN0
+p_cmd[1] => s_ctrl[0][1].IN0
+p_cmd[1] => s_ctrl[1][1].IN0
+p_arith => shifting_slice:gen_bs:0:lsb:ss_0.p_arith
+p_arith => shifting_slice:gen_bs:1:msb:ss_s.p_arith
+p_rotate => shifting_slice:gen_bs:0:lsb:ss_0.p_rotate
+p_rotate => shifting_slice:gen_bs:1:msb:ss_s.p_rotate
+p_op_1[0] => shifting_slice:gen_bs:0:lsb:ss_0.p_op[0]
+p_op_1[1] => shifting_slice:gen_bs:0:lsb:ss_0.p_op[1]
+p_op_1[2] => shifting_slice:gen_bs:0:lsb:ss_0.p_op[2]
+p_op_1[3] => shifting_slice:gen_bs:0:lsb:ss_0.p_op[3]
+p_op_2[0] => s_ctrl[0][1].IN1
+p_op_2[0] => s_ctrl[0][0].IN1
+p_op_2[1] => s_ctrl[1][1].IN1
+p_op_2[1] => s_ctrl[1][0].IN1
+p_op_2[2] => ~NO_FANOUT~
+p_op_2[3] => ~NO_FANOUT~
+p_result[0] <= shifting_slice:gen_bs:1:msb:ss_s.p_result[0]
+p_result[1] <= shifting_slice:gen_bs:1:msb:ss_s.p_result[1]
+p_result[2] <= shifting_slice:gen_bs:1:msb:ss_s.p_result[2]
+p_result[3] <= shifting_slice:gen_bs:1:msb:ss_s.p_result[3]
+
+
+|demo|alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:0:lsb:ss_0
+p_arith => s_wires.IN0
+p_arith => s_wires.IN0
+p_rotate => s_wires[1].IN0
+p_rotate => s_wires.IN1
+p_rotate => s_wires.IN1
+p_ctrl[0] => Equal0.IN1
+p_ctrl[0] => Equal1.IN0
+p_ctrl[0] => Equal2.IN1
+p_ctrl[1] => Equal0.IN0
+p_ctrl[1] => Equal1.IN1
+p_ctrl[1] => Equal2.IN0
+p_op[0] => s_wires.IN1
+p_op[0] => p_result.DATAB
+p_op[0] => p_result.DATAB
+p_op[1] => p_result.DATAB
+p_op[1] => p_result.DATAB
+p_op[1] => p_result.DATAB
+p_op[2] => p_result.DATAB
+p_op[2] => p_result.DATAB
+p_op[2] => p_result.DATAB
+p_op[3] => s_wires[1].IN1
+p_op[3] => s_wires.IN1
+p_op[3] => p_result.DATAB
+p_op[3] => p_result.DATAB
+p_result[0] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[1] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[2] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[3] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|barrel_shifter:sft|shifting_slice:\gen_bs:1:msb:ss_s
+p_arith => s_wires.IN0
+p_arith => s_wires.IN0
+p_rotate => s_wires[1].IN0
+p_rotate => s_wires[5].IN0
+p_rotate => s_wires.IN1
+p_rotate => s_wires.IN1
+p_ctrl[0] => Equal0.IN1
+p_ctrl[0] => Equal1.IN0
+p_ctrl[0] => Equal2.IN1
+p_ctrl[1] => Equal0.IN0
+p_ctrl[1] => Equal1.IN1
+p_ctrl[1] => Equal2.IN0
+p_op[0] => s_wires.IN1
+p_op[0] => p_result.DATAB
+p_op[0] => p_result.DATAB
+p_op[1] => s_wires.IN1
+p_op[1] => p_result.DATAB
+p_op[1] => p_result.DATAB
+p_op[2] => s_wires[1].IN1
+p_op[2] => p_result.DATAB
+p_op[2] => p_result.DATAB
+p_op[3] => s_wires[5].IN1
+p_op[3] => s_wires.IN1
+p_op[3] => p_result.DATAB
+p_op[3] => p_result.DATAB
+p_result[0] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[1] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[2] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+p_result[3] <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|word_comparator:cmp
+p_op_1[0] => tree_comparator:tc.p_op_1[0]
+p_op_1[1] => tree_comparator:tc.p_op_1[1]
+p_op_1[2] => tree_comparator:tc.p_op_1[2]
+p_op_1[3] => tree_comparator:tc.p_op_1[3]
+p_op_2[0] => tree_comparator:tc.p_op_2[0]
+p_op_2[1] => tree_comparator:tc.p_op_2[1]
+p_op_2[2] => tree_comparator:tc.p_op_2[2]
+p_op_2[3] => tree_comparator:tc.p_op_2[3]
+p_cmd[0] => p_result.IN1
+p_cmd[0] => p_result.IN1
+p_cmd[0] => p_result.IN1
+p_cmd[0] => p_result.IN1
+p_cmd[0] => p_result.IN1
+p_cmd[1] => p_result.IN0
+p_cmd[1] => p_result.IN0
+p_cmd[1] => p_result.IN0
+p_cmd[2] => p_result.IN1
+p_cmd[2] => p_result.IN1
+p_cmd[2] => p_result.IN1
+p_sgnd => tree_comparator:tc.p_sgnd
+p_result <= p_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|word_comparator:cmp|tree_comparator:tc
+p_op_1[0] => comparing_slice:gen_tc:0:first_stage:cs_0.p_op_1[0]
+p_op_1[1] => comparing_slice:gen_tc:0:first_stage:cs_0.p_op_1[1]
+p_op_1[2] => comparing_slice:gen_tc:0:first_stage:cs_0.p_op_1[2]
+p_op_1[3] => p_g.IN0
+p_op_1[3] => p_l.IN0
+p_op_1[3] => comparing_slice:gen_tc:0:first_stage:cs_0.p_op_1[3]
+p_op_1[3] => p_g.IN0
+p_op_2[0] => comparing_slice:gen_tc:0:first_stage:cs_0.p_op_2[0]
+p_op_2[1] => comparing_slice:gen_tc:0:first_stage:cs_0.p_op_2[1]
+p_op_2[2] => comparing_slice:gen_tc:0:first_stage:cs_0.p_op_2[2]
+p_op_2[3] => p_g.IN1
+p_op_2[3] => p_g.IN1
+p_op_2[3] => comparing_slice:gen_tc:0:first_stage:cs_0.p_op_2[3]
+p_op_2[3] => p_l.IN1
+p_sgnd => p_g.IN1
+p_sgnd => p_g.IN1
+p_sgnd => p_l.IN1
+p_sgnd => p_g.IN1
+p_sgnd => p_l.IN1
+p_g <= p_g.DB_MAX_OUTPUT_PORT_TYPE
+p_l <= p_l.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:0:first_stage:cs_0
+p_op_1[0] => comparator:gen_cs:0:comp_i.p_x_0
+p_op_1[1] => comparator:gen_cs:0:comp_i.p_x_1
+p_op_1[2] => comparator:gen_cs:1:comp_i.p_x_0
+p_op_1[3] => comparator:gen_cs:1:comp_i.p_x_1
+p_op_2[0] => comparator:gen_cs:0:comp_i.p_y_0
+p_op_2[1] => comparator:gen_cs:0:comp_i.p_y_1
+p_op_2[2] => comparator:gen_cs:1:comp_i.p_y_0
+p_op_2[3] => comparator:gen_cs:1:comp_i.p_y_1
+p_g[0] <= comparator:gen_cs:0:comp_i.p_g
+p_g[1] <= comparator:gen_cs:1:comp_i.p_g
+p_l[0] <= comparator:gen_cs:0:comp_i.p_l
+p_l[1] <= comparator:gen_cs:1:comp_i.p_l
+
+
+|demo|alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:0:first_stage:cs_0|comparator:\gen_cs:0:comp_i
+p_x_0 => p_g.IN0
+p_x_0 => p_g.IN0
+p_x_0 => p_l.IN0
+p_x_0 => p_l.IN0
+p_y_0 => p_l.IN1
+p_y_0 => p_l.IN1
+p_y_0 => p_g.IN1
+p_y_0 => p_g.IN1
+p_x_1 => p_g.IN0
+p_x_1 => p_g.IN1
+p_x_1 => p_l.IN0
+p_x_1 => p_l.IN1
+p_y_1 => p_l.IN1
+p_y_1 => p_l.IN1
+p_y_1 => p_g.IN1
+p_y_1 => p_g.IN1
+p_g <= p_g.DB_MAX_OUTPUT_PORT_TYPE
+p_l <= p_l.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:0:first_stage:cs_0|comparator:\gen_cs:1:comp_i
+p_x_0 => p_g.IN0
+p_x_0 => p_g.IN0
+p_x_0 => p_l.IN0
+p_x_0 => p_l.IN0
+p_y_0 => p_l.IN1
+p_y_0 => p_l.IN1
+p_y_0 => p_g.IN1
+p_y_0 => p_g.IN1
+p_x_1 => p_g.IN0
+p_x_1 => p_g.IN1
+p_x_1 => p_l.IN0
+p_x_1 => p_l.IN1
+p_y_1 => p_l.IN1
+p_y_1 => p_l.IN1
+p_y_1 => p_g.IN1
+p_y_1 => p_g.IN1
+p_g <= p_g.DB_MAX_OUTPUT_PORT_TYPE
+p_l <= p_l.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:1:last_stage:cs_s
+p_op_1[0] => comparator:gen_cs:0:comp_i.p_x_0
+p_op_1[1] => comparator:gen_cs:0:comp_i.p_x_1
+p_op_2[0] => comparator:gen_cs:0:comp_i.p_y_0
+p_op_2[1] => comparator:gen_cs:0:comp_i.p_y_1
+p_g[0] <= comparator:gen_cs:0:comp_i.p_g
+p_l[0] <= comparator:gen_cs:0:comp_i.p_l
+
+
+|demo|alu:test_alu|word_comparator:cmp|tree_comparator:tc|comparing_slice:\gen_tc:1:last_stage:cs_s|comparator:\gen_cs:0:comp_i
+p_x_0 => p_g.IN0
+p_x_0 => p_g.IN0
+p_x_0 => p_l.IN0
+p_x_0 => p_l.IN0
+p_y_0 => p_l.IN1
+p_y_0 => p_l.IN1
+p_y_0 => p_g.IN1
+p_y_0 => p_g.IN1
+p_x_1 => p_g.IN0
+p_x_1 => p_g.IN1
+p_x_1 => p_l.IN0
+p_x_1 => p_l.IN1
+p_y_1 => p_l.IN1
+p_y_1 => p_l.IN1
+p_y_1 => p_g.IN1
+p_y_1 => p_g.IN1
+p_g <= p_g.DB_MAX_OUTPUT_PORT_TYPE
+p_l <= p_l.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|alu:test_alu|bit_manipulator:bop
+p_op_1[0] => p_result.IN0
+p_op_1[0] => p_result.IN0
+p_op_1[0] => p_result.IN0
+p_op_1[0] => Mux3.IN3
+p_op_1[1] => p_result.IN0
+p_op_1[1] => p_result.IN0
+p_op_1[1] => p_result.IN0
+p_op_1[1] => Mux2.IN3
+p_op_1[2] => p_result.IN0
+p_op_1[2] => p_result.IN0
+p_op_1[2] => p_result.IN0
+p_op_1[2] => Mux1.IN3
+p_op_1[3] => p_result.IN0
+p_op_1[3] => p_result.IN0
+p_op_1[3] => p_result.IN0
+p_op_1[3] => Mux0.IN3
+p_op_2[0] => p_result.IN1
+p_op_2[0] => p_result.IN1
+p_op_2[0] => p_result.IN1
+p_op_2[1] => p_result.IN1
+p_op_2[1] => p_result.IN1
+p_op_2[1] => p_result.IN1
+p_op_2[2] => p_result.IN1
+p_op_2[2] => p_result.IN1
+p_op_2[2] => p_result.IN1
+p_op_2[3] => p_result.IN1
+p_op_2[3] => p_result.IN1
+p_op_2[3] => p_result.IN1
+p_cmd[0] => Mux0.IN5
+p_cmd[0] => Mux1.IN5
+p_cmd[0] => Mux2.IN5
+p_cmd[0] => Mux3.IN5
+p_cmd[1] => Mux0.IN4
+p_cmd[1] => Mux1.IN4
+p_cmd[1] => Mux2.IN4
+p_cmd[1] => Mux3.IN4
+p_result[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+p_result[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+p_result[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+p_result[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|seven_segment_decoder:hex_2
+bits[0] => Equal0.IN3
+bits[0] => Equal1.IN3
+bits[0] => Equal2.IN2
+bits[0] => Equal3.IN3
+bits[0] => Equal4.IN2
+bits[0] => Equal5.IN3
+bits[0] => Equal6.IN1
+bits[0] => Equal7.IN3
+bits[0] => Equal8.IN2
+bits[0] => Equal9.IN3
+bits[0] => Equal10.IN1
+bits[0] => Equal11.IN3
+bits[0] => Equal12.IN1
+bits[0] => Equal13.IN3
+bits[0] => Equal14.IN0
+bits[0] => Equal15.IN3
+bits[1] => Equal0.IN2
+bits[1] => Equal1.IN2
+bits[1] => Equal2.IN3
+bits[1] => Equal3.IN2
+bits[1] => Equal4.IN1
+bits[1] => Equal5.IN1
+bits[1] => Equal6.IN3
+bits[1] => Equal7.IN2
+bits[1] => Equal8.IN1
+bits[1] => Equal9.IN1
+bits[1] => Equal10.IN3
+bits[1] => Equal11.IN2
+bits[1] => Equal12.IN0
+bits[1] => Equal13.IN0
+bits[1] => Equal14.IN3
+bits[1] => Equal15.IN2
+bits[2] => Equal0.IN1
+bits[2] => Equal1.IN1
+bits[2] => Equal2.IN1
+bits[2] => Equal3.IN1
+bits[2] => Equal4.IN3
+bits[2] => Equal5.IN2
+bits[2] => Equal6.IN2
+bits[2] => Equal7.IN1
+bits[2] => Equal8.IN0
+bits[2] => Equal9.IN0
+bits[2] => Equal10.IN0
+bits[2] => Equal11.IN0
+bits[2] => Equal12.IN3
+bits[2] => Equal13.IN2
+bits[2] => Equal14.IN2
+bits[2] => Equal15.IN1
+bits[3] => Equal0.IN0
+bits[3] => Equal1.IN0
+bits[3] => Equal2.IN0
+bits[3] => Equal3.IN0
+bits[3] => Equal4.IN0
+bits[3] => Equal5.IN0
+bits[3] => Equal6.IN0
+bits[3] => Equal7.IN0
+bits[3] => Equal8.IN3
+bits[3] => Equal9.IN2
+bits[3] => Equal10.IN2
+bits[3] => Equal11.IN1
+bits[3] => Equal12.IN2
+bits[3] => Equal13.IN1
+bits[3] => Equal14.IN1
+bits[3] => Equal15.IN0
+segbits[0] <= segbits[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[1] <= segbits[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[2] <= segbits[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[3] <= segbits[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[4] <= segbits[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[5] <= segbits[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[6] <= segbits[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|seven_segment_decoder:hex_3
+bits[0] => Equal0.IN3
+bits[0] => Equal1.IN3
+bits[0] => Equal2.IN2
+bits[0] => Equal3.IN3
+bits[0] => Equal4.IN2
+bits[0] => Equal5.IN3
+bits[0] => Equal6.IN1
+bits[0] => Equal7.IN3
+bits[0] => Equal8.IN2
+bits[0] => Equal9.IN3
+bits[0] => Equal10.IN1
+bits[0] => Equal11.IN3
+bits[0] => Equal12.IN1
+bits[0] => Equal13.IN3
+bits[0] => Equal14.IN0
+bits[0] => Equal15.IN3
+bits[1] => Equal0.IN2
+bits[1] => Equal1.IN2
+bits[1] => Equal2.IN3
+bits[1] => Equal3.IN2
+bits[1] => Equal4.IN1
+bits[1] => Equal5.IN1
+bits[1] => Equal6.IN3
+bits[1] => Equal7.IN2
+bits[1] => Equal8.IN1
+bits[1] => Equal9.IN1
+bits[1] => Equal10.IN3
+bits[1] => Equal11.IN2
+bits[1] => Equal12.IN0
+bits[1] => Equal13.IN0
+bits[1] => Equal14.IN3
+bits[1] => Equal15.IN2
+bits[2] => Equal0.IN1
+bits[2] => Equal1.IN1
+bits[2] => Equal2.IN1
+bits[2] => Equal3.IN1
+bits[2] => Equal4.IN3
+bits[2] => Equal5.IN2
+bits[2] => Equal6.IN2
+bits[2] => Equal7.IN1
+bits[2] => Equal8.IN0
+bits[2] => Equal9.IN0
+bits[2] => Equal10.IN0
+bits[2] => Equal11.IN0
+bits[2] => Equal12.IN3
+bits[2] => Equal13.IN2
+bits[2] => Equal14.IN2
+bits[2] => Equal15.IN1
+bits[3] => Equal0.IN0
+bits[3] => Equal1.IN0
+bits[3] => Equal2.IN0
+bits[3] => Equal3.IN0
+bits[3] => Equal4.IN0
+bits[3] => Equal5.IN0
+bits[3] => Equal6.IN0
+bits[3] => Equal7.IN0
+bits[3] => Equal8.IN3
+bits[3] => Equal9.IN2
+bits[3] => Equal10.IN2
+bits[3] => Equal11.IN1
+bits[3] => Equal12.IN2
+bits[3] => Equal13.IN1
+bits[3] => Equal14.IN1
+bits[3] => Equal15.IN0
+segbits[0] <= segbits[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[1] <= segbits[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[2] <= segbits[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[3] <= segbits[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[4] <= segbits[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[5] <= segbits[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[6] <= segbits[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|seven_segment_decoder:hex_4
+bits[0] => Equal0.IN3
+bits[0] => Equal1.IN3
+bits[0] => Equal2.IN2
+bits[0] => Equal3.IN3
+bits[0] => Equal4.IN2
+bits[0] => Equal5.IN3
+bits[0] => Equal6.IN1
+bits[0] => Equal7.IN3
+bits[0] => Equal8.IN2
+bits[0] => Equal9.IN3
+bits[0] => Equal10.IN1
+bits[0] => Equal11.IN3
+bits[0] => Equal12.IN1
+bits[0] => Equal13.IN3
+bits[0] => Equal14.IN0
+bits[0] => Equal15.IN3
+bits[1] => Equal0.IN2
+bits[1] => Equal1.IN2
+bits[1] => Equal2.IN3
+bits[1] => Equal3.IN2
+bits[1] => Equal4.IN1
+bits[1] => Equal5.IN1
+bits[1] => Equal6.IN3
+bits[1] => Equal7.IN2
+bits[1] => Equal8.IN1
+bits[1] => Equal9.IN1
+bits[1] => Equal10.IN3
+bits[1] => Equal11.IN2
+bits[1] => Equal12.IN0
+bits[1] => Equal13.IN0
+bits[1] => Equal14.IN3
+bits[1] => Equal15.IN2
+bits[2] => Equal0.IN1
+bits[2] => Equal1.IN1
+bits[2] => Equal2.IN1
+bits[2] => Equal3.IN1
+bits[2] => Equal4.IN3
+bits[2] => Equal5.IN2
+bits[2] => Equal6.IN2
+bits[2] => Equal7.IN1
+bits[2] => Equal8.IN0
+bits[2] => Equal9.IN0
+bits[2] => Equal10.IN0
+bits[2] => Equal11.IN0
+bits[2] => Equal12.IN3
+bits[2] => Equal13.IN2
+bits[2] => Equal14.IN2
+bits[2] => Equal15.IN1
+bits[3] => Equal0.IN0
+bits[3] => Equal1.IN0
+bits[3] => Equal2.IN0
+bits[3] => Equal3.IN0
+bits[3] => Equal4.IN0
+bits[3] => Equal5.IN0
+bits[3] => Equal6.IN0
+bits[3] => Equal7.IN0
+bits[3] => Equal8.IN3
+bits[3] => Equal9.IN2
+bits[3] => Equal10.IN2
+bits[3] => Equal11.IN1
+bits[3] => Equal12.IN2
+bits[3] => Equal13.IN1
+bits[3] => Equal14.IN1
+bits[3] => Equal15.IN0
+segbits[0] <= segbits[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[1] <= segbits[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[2] <= segbits[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[3] <= segbits[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[4] <= segbits[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[5] <= segbits[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[6] <= segbits[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demo|seven_segment_decoder:hex_6
+bits[0] => Equal0.IN3
+bits[0] => Equal1.IN3
+bits[0] => Equal2.IN2
+bits[0] => Equal3.IN3
+bits[0] => Equal4.IN2
+bits[0] => Equal5.IN3
+bits[0] => Equal6.IN1
+bits[0] => Equal7.IN3
+bits[0] => Equal8.IN2
+bits[0] => Equal9.IN3
+bits[0] => Equal10.IN1
+bits[0] => Equal11.IN3
+bits[0] => Equal12.IN1
+bits[0] => Equal13.IN3
+bits[0] => Equal14.IN0
+bits[0] => Equal15.IN3
+bits[1] => Equal0.IN2
+bits[1] => Equal1.IN2
+bits[1] => Equal2.IN3
+bits[1] => Equal3.IN2
+bits[1] => Equal4.IN1
+bits[1] => Equal5.IN1
+bits[1] => Equal6.IN3
+bits[1] => Equal7.IN2
+bits[1] => Equal8.IN1
+bits[1] => Equal9.IN1
+bits[1] => Equal10.IN3
+bits[1] => Equal11.IN2
+bits[1] => Equal12.IN0
+bits[1] => Equal13.IN0
+bits[1] => Equal14.IN3
+bits[1] => Equal15.IN2
+bits[2] => Equal0.IN1
+bits[2] => Equal1.IN1
+bits[2] => Equal2.IN1
+bits[2] => Equal3.IN1
+bits[2] => Equal4.IN3
+bits[2] => Equal5.IN2
+bits[2] => Equal6.IN2
+bits[2] => Equal7.IN1
+bits[2] => Equal8.IN0
+bits[2] => Equal9.IN0
+bits[2] => Equal10.IN0
+bits[2] => Equal11.IN0
+bits[2] => Equal12.IN3
+bits[2] => Equal13.IN2
+bits[2] => Equal14.IN2
+bits[2] => Equal15.IN1
+bits[3] => Equal0.IN0
+bits[3] => Equal1.IN0
+bits[3] => Equal2.IN0
+bits[3] => Equal3.IN0
+bits[3] => Equal4.IN0
+bits[3] => Equal5.IN0
+bits[3] => Equal6.IN0
+bits[3] => Equal7.IN0
+bits[3] => Equal8.IN3
+bits[3] => Equal9.IN2
+bits[3] => Equal10.IN2
+bits[3] => Equal11.IN1
+bits[3] => Equal12.IN2
+bits[3] => Equal13.IN1
+bits[3] => Equal14.IN1
+bits[3] => Equal15.IN0
+segbits[0] <= segbits[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[1] <= segbits[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[2] <= segbits[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[3] <= segbits[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[4] <= segbits[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[5] <= segbits[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segbits[6] <= segbits[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

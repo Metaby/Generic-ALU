@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Thu Sep 15 14:06:33 2016
+Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Full Version
+Revision Name : Generic_ALU
+Top-level Entity Name : demo
+Family : Cyclone IV E
+Total logic elements : 263
+    Total combinational functions : 263
+    Dedicated logic registers : 35
+Total registers : 35
+Total pins : 69
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

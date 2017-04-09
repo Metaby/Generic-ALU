@@ -1,0 +1,88 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+USE ieee.std_logic_textio.all;
+
+ENTITY tb IS
+  GENERIC (
+		g_block_size 	:	integer := 3;
+		g_blocks		:	integer := 1
+  );
+  CONSTANT size : integer := integer((g_block_size + 1) * (g_blocks + 1) - 1);
+end ENTITY;
+
+ARCHITECTURE arch OF tb IS
+  constant timer      :   time := 100ns;
+  signal tb_op1	      :	  std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+  signal tb_op2    	  :	  std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+  signal tb_result    :   std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+  signal tb_sub       :   std_logic;
+  signal tb_cout      :   std_logic;
+  signal control_result  :   std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+begin
+  process is
+    begin
+      -- signed addition test
+      wait for timer;   
+      tb_sub <= '0';
+      for i in -128 to 127 loop
+        for j in -128 to 127 loop
+  	     	   control_result <= std_logic_vector(signed(tb_op1) + signed(tb_op2));
+  	     	   wait for timer;
+   		       tb_op1	<= std_logic_vector(to_signed(i,8));
+	     	    tb_op2	<= std_logic_vector(to_signed(j,8));
+	         	assert(control_result = tb_result) report "addition failed, false result" severity failure;
+            wait for timer;
+          end loop;
+      end loop;
+      wait for timer;
+      -- signed subtraction test
+      tb_sub <= '1';
+        for i in -128 to 127 loop
+          for j in -128 to 127 loop
+    	     	 control_result <= std_logic_vector(signed(tb_op1) - signed(tb_op2));
+    	     	 wait for timer;
+ 		        tb_op1	<= std_logic_vector(to_signed(i,8));
+	     	    tb_op2	<= std_logic_vector(to_signed(j,8));
+	         	assert(control_result = tb_result) report "addition failed, false result" severity failure;
+            wait for timer;
+          end loop;
+      end loop;
+      wait for timer;
+      -- unsigned addition test  
+      tb_sub <= '0';
+      for i in 0 to 255 loop
+        for j in 0 to 255 loop
+  	     	   control_result <= std_logic_vector(unsigned(tb_op1) + unsigned(tb_op2));
+  	     	   wait for timer;
+   		       tb_op1	<= std_logic_vector(to_unsigned(i,8));
+	     	    tb_op2	<= std_logic_vector(to_unsigned(j,8));
+	         	assert(control_result = tb_result) report "addition failed, false result" severity failure;
+            wait for timer;
+          end loop;
+      end loop;
+      wait for timer;
+      -- unsigned subtraction test
+      tb_sub <= '1';
+        for i in 0 to 255 loop
+          for j in 0 to 255 loop
+    	     	 control_result <= std_logic_vector(unsigned(tb_op1) - unsigned(tb_op2));
+    	     	 wait for timer;
+ 		        tb_op1	<= std_logic_vector(to_unsigned(i,8));
+	     	    tb_op2	<= std_logic_vector(to_unsigned(j,8));
+	         	assert(control_result = tb_result) report "addition failed, false result" severity failure;
+            wait for timer;
+          end loop;
+      end loop;
+      wait for timer;
+end process;
+
+dut : entity work.carry_select_adder
+port map  (  
+             p_sub      => tb_sub,
+             p_op_1      => tb_op1,
+             p_op_2      => tb_op2,
+             p_result      => tb_result,
+             p_ovflw     => tb_cout
+	         );
+end architecture;

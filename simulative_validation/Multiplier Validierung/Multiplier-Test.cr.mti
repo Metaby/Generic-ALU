@@ -1,0 +1,109 @@
+{H:/Master Projekt/ModelSim/Multiplier Validierung/multiplier_slice.vhd} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/multiplier_slice.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity multiplier_slice
+-- Compiling architecture arch of multiplier_slice
+
+} {} {}} {{H:/Master Projekt/ModelSim/Multiplier Validierung/multiplier_slice.vhd}} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/multiplier_slice.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity multiplier_slice
+-- Compiling architecture arch of multiplier_slice
+
+} {} {}} {{H:/Master Projekt/ModelSim/Multiplier Validierung/testbench.vhd}} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/testbench.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity tb
+-- Compiling architecture arch of tb
+** Warning: [4] H:/Master Projekt/ModelSim/Multiplier Validierung/testbench.vhd(15): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+-- Loading entity four_quadrant_multiplier
+
+} {} {}} {{H:/Master Projekt/ModelSim/Multiplier Validierung/four_quadrant_multiplier.vhd}} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/four_quadrant_multiplier.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity four_quadrant_multiplier
+-- Compiling architecture arch of four_quadrant_multiplier
+** Warning: [10] H:/Master Projekt/ModelSim/Multiplier Validierung/four_quadrant_multiplier.vhd(40): (vcom-1128) Missing reserved word BEGIN in generate statement.
+
+
+} {} {}} {H:/Master Projekt/ModelSim/Multiplier Validierung/full_adder.vhd} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/full_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity full_adder
+-- Compiling architecture arch of full_adder
+
+} {} {}} {{H:/Master Projekt/ModelSim/Multiplier Validierung/full_adder.vhd}} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/full_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity full_adder
+-- Compiling architecture arch of full_adder
+
+} {} {}} {H:/Master Projekt/ModelSim/Multiplier Validierung/multiplier_base_cell.vhd} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/multiplier_base_cell.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity multiplier_base_cell
+-- Compiling architecture arch of multiplier_base_cell
+
+} {} {}} {H:/Master Projekt/ModelSim/Multiplier Validierung/testbench.vhd} {2 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/testbench.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity tb
+-- Compiling architecture arch of tb
+** Warning: [4] H:/Master Projekt/ModelSim/Multiplier Validierung/testbench.vhd(13): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+-- Loading entity four_quadrant_multiplier
+
+} {} {}} {{H:/Master Projekt/ModelSim/Multiplier Validierung/multiplier_base_cell.vhd}} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/multiplier_base_cell.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity multiplier_base_cell
+-- Compiling architecture arch of multiplier_base_cell
+
+} {} {}} {H:/Master Projekt/ModelSim/Multiplier Validierung/four_quadrant_multiplier.vhd} {2 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/four_quadrant_multiplier.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity four_quadrant_multiplier
+-- Compiling architecture arch of four_quadrant_multiplier
+** Warning: [10] H:/Master Projekt/ModelSim/Multiplier Validierung/four_quadrant_multiplier.vhd(57): (vcom-1128) Missing reserved word BEGIN in generate statement.
+
+
+} {} {}} {H:/Master Projekt/ModelSim/Multiplier Validierung/half_adder.vhd} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/half_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity half_adder
+-- Compiling architecture arch of half_adder
+
+} {} {}} {{H:/Master Projekt/ModelSim/Multiplier Validierung/half_adder.vhd}} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Multiplier Validierung/half_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity half_adder
+-- Compiling architecture arch of half_adder
+
+} {} {}}

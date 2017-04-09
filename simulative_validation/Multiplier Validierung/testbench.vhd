@@ -1,0 +1,69 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+USE ieee.std_logic_textio.all;
+
+ENTITY tb IS
+  GENERIC (
+    size : integer := 7
+  );
+end ENTITY;
+
+ARCHITECTURE arch OF tb IS
+  constant timer    :   time := 100ns;
+  signal tb_sgnd	   :	  std_logic;
+  signal tb_op1	    :	  std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+  signal tb_op2	    :	  std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+  signal tb_add	    :	  std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+  signal tb_result     :   std_logic_vector((size + 1) * 2 - 1 DOWNTO 0);
+  signal control_result    :   std_logic_vector((size + 1) * 2 - 1 DOWNTO 0);
+
+begin
+  process is
+    begin
+      wait for timer;
+	  -- signed test
+      tb_sgnd <= '1';
+      tb_add <= (OTHERS => '0');
+        for i in -128 to 127 loop
+          for j in -128 to 127 loop
+            for a in -128 to 127 loop
+	     	      control_result <= std_logic_vector(signed(tb_op1) * signed(tb_op2) + signed(tb_add));
+	     	      wait for timer;
+	     	      tb_op1	<= std_logic_vector(to_signed(i,8));	
+	     	      tb_op2	<= std_logic_vector(to_signed(j,8));	 
+	     	      tb_add <= std_logic_vector(to_signed(0,8));
+	     	      assert(control_result = tb_result) report "multiplication failed, false result" severity failure;	     	    
+              wait for timer;	   
+            end loop;      	
+          end loop;
+      end loop;
+      wait for timer;
+	  -- unsigned test
+      tb_sgnd <= '0';
+      tb_add <= (OTHERS => '0');
+        for i in 0 to 255 loop
+          for j in 0 to 255 loop
+            for a in 0 to 255 loop
+	     	      control_result <= std_logic_vector(unsigned(tb_op1) * unsigned(tb_op2) + unsigned(tb_add));
+	     	      wait for timer;
+	     	      tb_op1	<= std_logic_vector(to_unsigned(i,8));	
+	     	      tb_op2	<= std_logic_vector(to_unsigned(j,8));	 
+	     	      tb_add <= std_logic_vector(to_unsigned(0,8));
+	     	      assert(control_result = tb_result) report "multiplication failed, false result" severity failure;	     	    
+              wait for timer;	   
+            end loop;      	
+          end loop;
+      end loop;
+      wait for timer;
+end process;
+
+dut : entity work.four_quadrant_multiplier
+port map  (  p_sgnd	  =>  tb_sgnd,
+		         p_op_1		  =>  tb_op1,
+		         p_op_2		  =>  tb_op2,
+		         p_add	   =>  tb_add,
+		         p_result_lo =>  tb_result(7 DOWNTO 0),
+	           p_result_hi =>  tb_result(15 DOWNTO 8)
+	         );
+end architecture;

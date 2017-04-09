@@ -1,0 +1,129 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+USE ieee.std_logic_textio.all;
+
+ENTITY tb IS
+  GENERIC (
+		size 	:	integer := 7
+  );
+end ENTITY;
+
+ARCHITECTURE arch OF tb IS
+  constant timer      :   time := 100ns;
+  signal tb_op1	      :	  std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+  signal tb_op2    	  :	  std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+  signal tb_result    :   std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+  signal tb_cmd       :   std_logic_vector(1 DOWNTO 0);
+  signal tb_ari       :   std_logic;
+  signal tb_rot       :   std_logic;
+  signal control_result  :   std_logic_vector(size DOWNTO 0) := (OTHERS => '0');
+begin
+  process is
+    begin
+      -- sll test
+      wait for timer;   
+      tb_cmd <= "01";
+      tb_ari <= '0';
+      tb_rot <= '0';
+      for i in 0 to 255 loop
+        for j in 0 to 7 loop
+  	     	   control_result <= std_logic_vector(unsigned(tb_op1) sll to_integer(unsigned(tb_op2)));
+  	     	   wait for timer;
+   		       tb_op1	<= std_logic_vector(to_unsigned(i,8));
+	     	    tb_op2	<= std_logic_vector(to_unsigned(j,8));
+	         	assert(control_result = tb_result) report "shift failed, false result" severity failure;
+            wait for timer;
+          end loop;
+      end loop;
+      -- srl test
+      wait for timer;   
+      tb_cmd <= "10";
+      tb_ari <= '0';
+      tb_rot <= '0';
+      for i in 0 to 255 loop
+        for j in 0 to 7 loop
+  	     	   control_result <= std_logic_vector(unsigned(tb_op1) srl to_integer(unsigned(tb_op2)));
+  	     	   wait for timer;
+   		       tb_op1	<= std_logic_vector(to_unsigned(i,8));
+	     	    tb_op2	<= std_logic_vector(to_unsigned(j,8));
+	         	assert(control_result = tb_result) report "shift failed, false result" severity failure;
+            wait for timer;
+          end loop;
+      end loop;
+      -- sla test
+      wait for timer;   
+      tb_cmd <= "01";
+      tb_ari <= '1';
+      tb_rot <= '0';
+      for i in 0 to 255 loop
+        for j in 0 to 7 loop
+            -- sla equals sll
+  	     	   control_result <= std_logic_vector(unsigned(tb_op1) sll to_integer(unsigned(tb_op2)));
+  	     	   wait for timer;
+   		       tb_op1	<= std_logic_vector(to_unsigned(i,8));
+	     	    tb_op2	<= std_logic_vector(to_unsigned(j,8));
+	         	assert(control_result = tb_result) report "shift failed, false result" severity failure;
+            wait for timer;
+          end loop;
+      end loop;
+      -- sra test
+      wait for timer;   
+      tb_cmd <= "10";
+      tb_ari <= '1';
+      tb_rot <= '0';
+      for i in 0 to 255 loop
+        for j in 0 to 7 loop
+   		       tb_op1	<= std_logic_vector(to_unsigned(i,8));
+	     	    tb_op2	<= std_logic_vector(to_unsigned(j,8));
+	     	    wait for timer;
+  	     	   control_result(size - j DOWNTO 0) <= tb_op1(size DOWNTO j);
+  	     	   control_result(size DOWNTO size - j) <= (OTHERS => tb_op1(size));
+	     	    wait for timer;
+	         	assert(control_result = tb_result) report "shift failed, false result" severity note;
+            wait for timer;
+          end loop;
+      end loop;
+      -- rol test
+      wait for timer;   
+      tb_cmd <= "01";
+      tb_ari <= '0';
+      tb_rot <= '1';
+      for i in 0 to 255 loop
+        for j in 0 to 7 loop
+  	     	   control_result <= std_logic_vector(unsigned(tb_op1) rol to_integer(unsigned(tb_op2)));
+  	     	   wait for timer;
+   		       tb_op1	<= std_logic_vector(to_unsigned(i,8));
+	     	    tb_op2	<= std_logic_vector(to_unsigned(j,8));
+	         	assert(control_result = tb_result) report "shift failed, false result" severity failure;
+            wait for timer;
+          end loop;
+      end loop;
+      -- ror test
+      wait for timer;   
+      tb_cmd <= "10";
+      tb_ari <= '0';
+      tb_rot <= '1';
+      for i in 0 to 255 loop
+        for j in 0 to 7 loop
+  	     	   control_result <= std_logic_vector(unsigned(tb_op1) ror to_integer(unsigned(tb_op2)));
+  	     	   wait for timer;
+   		       tb_op1	<= std_logic_vector(to_unsigned(i,8));
+	     	    tb_op2	<= std_logic_vector(to_unsigned(j,8));
+	         	assert(control_result = tb_result) report "shift failed, false result" severity failure;
+            wait for timer;
+          end loop;
+      end loop;      
+      wait for timer;
+end process;
+
+dut : entity work.barrel_shifter
+port map  ( 
+		        p_cmd => tb_cmd,
+	         	p_arith	=> tb_ari,
+		        p_rotate	=> tb_rot,
+		        p_op_1 => tb_op1,
+		        p_op_2 => tb_op2,
+		        p_result => tb_result
+	         );
+end architecture;

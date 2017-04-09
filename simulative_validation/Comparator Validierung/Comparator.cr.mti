@@ -1,0 +1,39 @@
+{H:/Master Projekt/ModelSim/Comparator Validierung/word_comparator.vhd} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Comparator Validierung/word_comparator.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package MATH_REAL
+-- Compiling entity word_comparator
+-- Compiling architecture arch of word_comparator
+
+} {} {}} {H:/Master Projekt/ModelSim/Comparator Validierung/comparing_slice.vhd} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Comparator Validierung/comparing_slice.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity comparing_slice
+-- Compiling architecture arch of comparing_slice
+
+} {} {}} {H:/Master Projekt/ModelSim/Comparator Validierung/comparator.vhd} {1 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Comparator Validierung/comparator.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity comparator
+-- Compiling architecture arch of comparator
+
+} {} {}} {H:/Master Projekt/ModelSim/Comparator Validierung/testbench.vhd} {2 {vcom -work work -2002 -explicit {H:/Master Projekt/ModelSim/Comparator Validierung/testbench.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity tb
+-- Compiling architecture arch of tb
+** Warning: [4] H:/Master Projekt/ModelSim/Comparator Validierung/testbench.vhd(13): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+-- Loading package MATH_REAL
+-- Loading entity word_comparator
+
+} {} {}}
